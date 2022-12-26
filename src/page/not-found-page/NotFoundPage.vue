@@ -4,9 +4,7 @@
       <h3>404</h3>
       <p>PAGE NOT FOUND</p>
       <RouterLink to="/login">
-        <button type="button" class="btn-submit">
-          Back to Login
-        </button>
+        <button type="button" class="btn-submit">Back to Login</button>
       </RouterLink>
     </div>
   </div>
@@ -28,18 +26,21 @@
       font-size: 170px;
       font-weight: 600;
       line-height: 110px;
-      @media screen and (max-width: 1000px){
+      @media screen and (max-width: 1024px) {
         font-size: 8rem;
       }
-      @media screen and (max-width: 425px){
+      @media screen and (max-width: 768px) {
         font-size: 4rem;
       }
     }
 
     .btn-submit {
       padding: 9px 20px;
-      border-radius: 5px;
+      border-radius: 10px;
       cursor: pointer;
+      @media screen and (max-width: 425px) {
+        width: 150px;
+      }
 
       &:hover {
         color: #ededed;

@@ -1,12 +1,11 @@
 <template>
-<div id="app">
-  <router-view></router-view>
-</div>
+  <div id="app">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style>
@@ -21,9 +20,12 @@ html {
 body {
   margin: 0;
 }
-#app{
+#app {
   display: flex;
   justify-content: center;
   background: #ededed;
+}
+h1 {
+  margin: 0;
 }
 </style>
