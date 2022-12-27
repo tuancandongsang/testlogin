@@ -20,11 +20,9 @@ html {
 body {
   margin: 0;
 }
-#app {
-  display: flex;
-  justify-content: center;
-  background: #ededed;
-}
+
+#app {}
+
 h1 {
   margin: 0;
 }

@@ -7,12 +7,15 @@ import 'ant-design-vue/dist/antd.css';
 import NotFound from './page/not-found-page/NotFoundPage.vue'
 import login from './page/login/login.vue';
 import { setupAndGetI18n } from './config/setup-i18n';
+import home from './page/home/home.vue'
 
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/login', component: login, },
+    // { path: '/', component: home },
+    { path: '/login', component: login },
+    { path: '/', component: home },
     { path: '/:notFound(.*)', component: NotFound },
   ],
 });

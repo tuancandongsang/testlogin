@@ -2,9 +2,9 @@
   <div id="not-found-page">
     <div class="box">
       <h3>404</h3>
-      <p>PAGE NOT FOUND</p>
+      <p>{{$tc('pagenotfound')}}</p>
       <RouterLink to="/login">
-        <button type="button" class="btn-submit">Back to Login</button>
+        <button type="button" class="btn-submit">{{$tc('backtologin')}}</button>
       </RouterLink>
     </div>
   </div>

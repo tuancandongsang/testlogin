@@ -1,1 +1,1 @@
-export const DEFAULT_LANG = 'kr';
+export const DEFAULT_LANG = 'en';
