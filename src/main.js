@@ -4,11 +4,10 @@ import { createRouter, createWebHistory } from 'vue-router';
 import App from './App.vue';
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
-import NotFound from './page/not-found-page/NotFoundPage.vue'
+import NotFound from './page/not-found-page/NotFoundPage.vue';
 import login from './page/login/login.vue';
 import { setupAndGetI18n } from './config/setup-i18n';
-import home from './page/home/home.vue'
-
+import home from './page/home/home.vue';
 
 const router = createRouter({
   history: createWebHistory(),
