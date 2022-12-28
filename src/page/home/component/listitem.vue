@@ -1,19 +1,33 @@
 <template>
   <div class="listitem">
-    <div  class="listitem-list">
+    <div class="listitem-list">
       <Itemlist v-for="item in itemsList" :key="item.id" :data="item" />
     </div>
     <div class="listitem-load">
-      <button @click="loadding">Load More</button>
+      <button :class="nodataCSS ? 'nodataCSS' : ''" @click="loadding">
+        Load More
+      </button>
     </div>
   </div>
 </template>
 
 <script>
-import { mapActions , mapGetters} from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 import Itemlist from '../../../components/itemlist.vue';
 export default {
   components: { Itemlist },
+  // props: {
+  //   itemsList: {
+  //     type: Array,
+  //     default: [],
+  //     required: true,
+  //   },
+  //   valueSearch: {
+  //     type: {
+  //       type: Number,
+  //     },
+  //   },
+  // },
   methods: {
     ...mapActions(['getAllList']),
     loadding() {
@@ -21,9 +35,26 @@ export default {
     },
   },
   async created() {
-    this.getAllList()
+    this.getAllList();
   },
-  computed:{ ...mapGetters(['itemsList', 'valueSearch'])}
+  computed: {
+    ...mapGetters(['itemsList', 'filter', 'itemsProcess', 'itemSystem']),
+    itemsList() {
+      if (this.filter == 'process') {
+        return this.itemsProcess;
+      } else if (this.filter == 'system') {
+        return this.itemSystem;
+      }
+      return [];
+    },
+    nodataCSS() {
+      if (this.itemsList.length == 0) {
+        return true;
+      }
+      return false;
+    },
+  },
+  // computed: { ...mapGetters(['itemsList', 'valueSearch']) },
 };
 </script>
 
@@ -34,10 +65,9 @@ export default {
   border-radius: 4px;
   height: 85%;
   position: relative;
-  &-list{
+  &-list {
     height: 90%;
     overflow: auto;
-    
   }
   &-load {
     position: absolute;
@@ -49,6 +79,7 @@ export default {
     transform: translate(-50%, 0);
     display: flex;
     justify-content: center;
+
     button {
       width: 100%;
       padding: 4px 12px;
@@ -60,6 +91,12 @@ export default {
       cursor: pointer;
       &:hover {
         background-color: rgb(80, 164, 248);
+      }
+    }
+    .nodataCSS {
+      background-color: #999;
+      &:hover {
+        background-color: #999;
       }
     }
   }
