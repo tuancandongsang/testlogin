@@ -6,7 +6,7 @@
             <p>{{data.time}}</p>
             <p>{{data.presentStatus}}</p>
         </div>
-        <div><router-link to="/login">Detail <i class="fa-solid fa-arrow-right"></i></router-link></div>
+        <div><router-link :to="`/${data.id}`">Detail <i class="fa-solid fa-arrow-right"></i></router-link></div>
     </div>
 </template>
 

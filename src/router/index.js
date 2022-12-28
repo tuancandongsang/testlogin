@@ -19,7 +19,8 @@ export const router = createRouter({
             },
             {
                 path: '/:id',
-                component: detail
+                component: detail,
+                props: true,
             }
             ]
         },

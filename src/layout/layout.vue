@@ -14,6 +14,6 @@ export default {
 
 <style>
 .layout{
-   height: 100vh;
+   height: 90vh;
 }
 </style>

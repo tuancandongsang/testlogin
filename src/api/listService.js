@@ -15,7 +15,7 @@ class listService {
     return request.get(API_ENDPOINT.LIST_DETAIL);
   }
   getListDetail(id) {
-    return request.get(API_ENDPOINT.LIST_PRODUCT + `/${id}`);
+    return request.get(API_ENDPOINT.LIST_DETAIL + `/${id}`);
   }
 }
 

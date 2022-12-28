@@ -6,7 +6,7 @@
       "time": "2022-11-24 13:21:42.683",
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
-      "previousStatus": "LOW_LIMIT",
+      "previousState": "LOW_LIMIT",
       "conf": "2022-11-24 13:21:42.683"
     },
     {
@@ -15,7 +15,7 @@
       "time": "2022-11-24 13:21:42.683",
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
-      "previousStatus": "LOW_LIMIT",
+      "previousState": "LOW_LIMIT",
       "conf": "2022-11-24 13:21:42.683"
     },
     {
@@ -24,7 +24,7 @@
       "time": "2022-11-24 13:21:42.683",
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
-      "previousStatus": "LOW_LIMIT",
+      "previousState": "LOW_LIMIT",
       "conf": "2022-11-24 13:21:42.683"
     },
     {
@@ -33,7 +33,7 @@
       "time": "2022-11-24 13:21:42.683",
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
-      "previousStatus": "LOW_LIMIT",
+      "previousState": "LOW_LIMIT",
       "conf": "2022-11-24 13:21:42.683"
     },
     {
@@ -42,7 +42,7 @@
       "time": "2022-11-24 13:21:42.683",
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
-      "previousStatus": "LOW_LIMIT",
+      "previousState": "LOW_LIMIT",
       "conf": "2022-11-24 13:21:42.683"
     },
     {
@@ -51,7 +51,7 @@
       "time": "2022-11-24 13:21:42.683",
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
-      "previousStatus": "LOW_LIMIT",
+      "previousState": "LOW_LIMIT",
       "conf": "2022-11-24 13:21:42.683"
     },
     {
@@ -60,7 +60,7 @@
       "time": "2022-11-24 13:21:42.683",
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
-      "previousStatus": "LOW_LIMIT",
+      "previousState": "LOW_LIMIT",
       "conf": "2022-11-24 13:21:42.683"
     },
     {
@@ -69,7 +69,7 @@
       "time": "2022-11-24 13:21:42.683",
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
-      "previousStatus": "LOW_LIMIT",
+      "previousState": "LOW_LIMIT",
       "conf": "2022-11-24 13:21:42.683"
     },
     {
@@ -78,7 +78,7 @@
       "time": "2022-11-24 13:21:42.683",
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
-      "previousStatus": "LOW_LIMIT",
+      "previousState": "LOW_LIMIT",
       "conf": "2022-11-24 13:21:42.683"
     }
   ]

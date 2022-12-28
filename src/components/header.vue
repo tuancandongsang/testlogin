@@ -2,14 +2,18 @@
   <div class="header">
     <div class="header-menu"><i class="fa-solid fa-bars"></i></div>
     <div class="header-noty">
-      <div class="header-noty-filter"><i class="fa-solid fa-filter"></i></div>
+      <div class="header-noty-filter">
+        <Modal />
+      </div>
       <div class="header-noty-bell"> <span class="header-noty-bell-qty">1</span><i class="fa-solid fa-bell"></i></div>
     </div>
   </div>
 </template>
 
 <script>
+import Modal from "../components/modal.vue"
 export default {
+  components:{Modal}
 
 }
 </script>
@@ -20,6 +24,7 @@ export default {
   justify-content: space-between;
   font-size: 1.5rem;
   padding: 10px;
+  max-height: 10vh;
   &-menu{}
   &-noty{
     display: flex;

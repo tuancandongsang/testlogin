@@ -2,22 +2,36 @@
     <div class="detail">
         <div class="detail-container">
             <h2> Event Details</h2>
-            <p>Name: </p>
-            <p>Notified Date/Time</p>
-            <p>Present Value</p>
-            <p>Present Status</p>
-            <p>Previous State</p>
-            <p>Conf Y/N</p>
-            <p>Note</p>
+            <p><b>Name:</b> <span>{{ dataDetail?.name }}</span></p>
+            <p>Notified Date/Time: <span>{{ dataDetail?.time }}</span></p>
+            <p><b>Present Value:</b> <span>{{ dataDetail?.presentValue }}</span></p>
+            <p><b>Present Status:</b> <span>{{ dataDetail?.presentStatus }}</span></p>
+            <p>Previous State: <span>{{ dataDetail?.previousState }}</span></p>
+            <p>Conf Y/N: <span>{{ dataDetail?.conf }}</span></p>
+            <p><b>Note:</b></p>
+            <textarea v-model="message" placeholder="note..."></textarea>
         </div>
         <div class="detail-btn">
-            <button>OK</button>
+            <router-link to="/" ><button>OK</button></router-link>
         </div>
     </div>
 </template>
 
 <script>
+import listService from '../../api/listService';
 export default {
+    props: ['id'],
+    data(){
+        return{
+            dataDetail: null,
+            message:''
+        }
+    },
+    async created(){
+        const response = await listService.getListDetail(this.id)
+        this.dataDetail = response.data
+        console.log( this.dataDetail);
+    }
 
 }
 </script>
@@ -34,6 +48,18 @@ export default {
         h2 {
             text-align: center;
         }
+        span{
+            font-size: 1rem;
+            color: tomato;
+            font-weight: 600;
+        }
+        textarea{
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #999;
+            border-radius: 8px;
+        }
     }
 
     &-btn {
@@ -49,6 +75,7 @@ export default {
             font-size: 1rem;
             font-weight: 500;
             background-color: dodgerblue;
+            color: #333;
             cursor: pointer;
 
             &:hover {
