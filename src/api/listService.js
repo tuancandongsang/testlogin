@@ -12,7 +12,7 @@ class listService {
     listService._instance = this;
   }
   getListAll() {
-    return request.get(API_ENDPOINT.LIST_DETAIL);
+    return request.get(API_ENDPOINT.LIST_ALL);
   }
   getListDetail(id) {
     return request.get(API_ENDPOINT.LIST_DETAIL + `/${id}`);

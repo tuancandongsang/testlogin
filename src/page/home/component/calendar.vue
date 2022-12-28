@@ -14,7 +14,7 @@ export default {
 .calendar{
     display: flex;
     justify-content: end;
-    margin-top: 30px;
+    margin:  15px 0;
 }
 
 </style>

@@ -1,10 +1,10 @@
 <template>
     <div class="itemlist">
-        <div class="itemlist-avatar">AV</div>
+        <div class="itemlist-avatar">{{avatar}}</div>
         <div class="itemlist-infor">
-            <h3>{{data.name}}</h3>
-            <p>{{data.time}}</p>
-            <p>{{data.presentStatus}}</p>
+            <h3>{{ data.name }}</h3>
+            <p>{{ data.time }}</p>
+            <p>{{ data.presentStatus }}</p>
         </div>
         <div><router-link :to="`/${data.id}`">Detail <i class="fa-solid fa-arrow-right"></i></router-link></div>
     </div>
@@ -13,13 +13,21 @@
 <script>
 export default {
     props: {
-    // route object
-    data: {
-      type: Object,
-      required: true
-    }},
-    created() {
-        console.log(this.data.presentStatus);
+        data: {
+            type: Object,
+            required: true
+        }
+    },
+    created(){
+        console.log(this.data.value);
+    },
+    computed:{
+        avatar (){
+            if (this.data.value){
+                return `PRO`
+            }
+            return  `SYT`
+        }
     }
 }
 </script>

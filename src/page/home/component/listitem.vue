@@ -1,7 +1,7 @@
 <template>
   <div class="listitem">
     <div  class="listitem-list">
-      <Itemlist v-for="item in listItem" :key="item.id" :data="item" />
+      <Itemlist v-for="item in itemsList" :key="item.id" :data="item" />
     </div>
     <div class="listitem-load">
       <button @click="loadding">Load More</button>
@@ -10,24 +10,20 @@
 </template>
 
 <script>
-import listService from '../../../api/listService';
+import { mapActions , mapGetters} from 'vuex';
 import Itemlist from '../../../components/itemlist.vue';
 export default {
   components: { Itemlist },
-  data(){
-    return{
-      listItem:[],
-    }
-  },
   methods: {
+    ...mapActions(['getAllList']),
     loadding() {
       console.log('load more');
     },
   },
   async created() {
-    const response = await listService.getListAll();
-    this.listItem = response.data
+    this.getAllList()
   },
+  computed:{ ...mapGetters(['itemsList', 'valueSearch'])}
 };
 </script>
 

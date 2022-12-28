@@ -7,7 +7,8 @@
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
       "previousState": "LOW_LIMIT",
-      "conf": "2022-11-24 13:21:42.683"
+      "conf": "2022-11-24 13:21:42.683",
+      "value":"process"
     },
     {
       "id": "2",
@@ -16,7 +17,8 @@
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
       "previousState": "LOW_LIMIT",
-      "conf": "2022-11-24 13:21:42.683"
+      "conf": "2022-11-24 13:21:42.683",
+      "value":"process"
     },
     {
       "id": "3",
@@ -25,7 +27,8 @@
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
       "previousState": "LOW_LIMIT",
-      "conf": "2022-11-24 13:21:42.683"
+      "conf": "2022-11-24 13:21:42.683",
+      "value":"process"
     },
     {
       "id": "4",
@@ -34,7 +37,8 @@
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
       "previousState": "LOW_LIMIT",
-      "conf": "2022-11-24 13:21:42.683"
+      "conf": "2022-11-24 13:21:42.683",
+      "value":"process"
     },
     {
       "id": "5",
@@ -43,7 +47,8 @@
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
       "previousState": "LOW_LIMIT",
-      "conf": "2022-11-24 13:21:42.683"
+      "conf": "2022-11-24 13:21:42.683",
+      "value":"process"
     },
     {
       "id": "6",
@@ -52,7 +57,8 @@
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
       "previousState": "LOW_LIMIT",
-      "conf": "2022-11-24 13:21:42.683"
+      "conf": "2022-11-24 13:21:42.683",
+      "value":"process"
     },
     {
       "id": "7",
@@ -61,7 +67,8 @@
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
       "previousState": "LOW_LIMIT",
-      "conf": "2022-11-24 13:21:42.683"
+      "conf": "2022-11-24 13:21:42.683",
+      "value":"process"
     },
     {
       "id": "8",
@@ -70,7 +77,8 @@
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
       "previousState": "LOW_LIMIT",
-      "conf": "2022-11-24 13:21:42.683"
+      "conf": "2022-11-24 13:21:42.683",
+      "value":"process"
     },
     {
       "id": "9",
@@ -79,7 +87,8 @@
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",
       "previousState": "LOW_LIMIT",
-      "conf": "2022-11-24 13:21:42.683"
+      "conf": "2022-11-24 13:21:42.683",
+      "value":"process"
     }
   ]
 }

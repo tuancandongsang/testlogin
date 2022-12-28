@@ -19,8 +19,8 @@
 export default {
     data() {
         return {
-            visible: true,
-            picked: 'System',
+            visible: false,
+            picked: 'process',
         }
     },
     methods: {
