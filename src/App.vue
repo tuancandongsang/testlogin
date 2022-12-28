@@ -21,7 +21,9 @@ body {
   margin: 0;
 }
 
-#app {}
+#app {
+  height: 100vh;
+}
 
 h1 {
   margin: 0;

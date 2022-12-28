@@ -19,9 +19,8 @@ export default {
   display: flex;
   justify-content: space-between;
   font-size: 1.5rem;
-  &-menu{
-
-  }
+  padding: 10px;
+  &-menu{}
   &-noty{
     display: flex;
     gap: 10px;

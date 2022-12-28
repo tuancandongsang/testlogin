@@ -1,6 +1,8 @@
 <template>
   <div class="listitem">
-    <Itemlist />
+    <div  class="listitem-list">
+      <Itemlist v-for="item in listItem" :key="item.id" :data="item" />
+    </div>
     <div class="listitem-load">
       <button @click="loadding">Load More</button>
     </div>
@@ -12,6 +14,11 @@ import listService from '../../../api/listService';
 import Itemlist from '../../../components/itemlist.vue';
 export default {
   components: { Itemlist },
+  data(){
+    return{
+      listItem:[],
+    }
+  },
   methods: {
     loadding() {
       console.log('load more');
@@ -19,7 +26,7 @@ export default {
   },
   async created() {
     const response = await listService.getListAll();
-    console.log(response);
+    this.listItem = response.data
   },
 };
 </script>
@@ -29,8 +36,13 @@ export default {
   border: 1px solid #999;
   padding: 8px 12px;
   border-radius: 4px;
-  height: 80%;
+  height: 78%;
   position: relative;
+  &-list{
+    height: 90%;
+    overflow: auto;
+    
+  }
   &-load {
     position: absolute;
     width: 80%;
@@ -43,9 +55,9 @@ export default {
     justify-content: center;
     button {
       width: 100%;
-      padding: 8px 12px;
+      padding: 4px 12px;
       border: none;
-      border-radius: 4px;
+      border-radius: 8px;
       font-size: 1rem;
       font-weight: 500;
       background-color: dodgerblue;
