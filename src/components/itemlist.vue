@@ -2,12 +2,12 @@
   <div class="itemlist">
     <div class="itemlist-avatar">{{ avatar }}</div>
     <div class="itemlist-infor">
-      <h3>{{ data.name }}</h3>
-      <p>{{ data.time }}</p>
-      <p>{{ data.presentStatus }}</p>
+      <h3>{{ data?.name }}</h3>
+      <p>{{ data?.time }}</p>
+      <p>{{ data?.presentStatus }}</p>
     </div>
     <div>
-      <router-link :to="`/${data.id}`"
+      <router-link :to="`/${data?.id}`"
         >Detail <i class="fa-solid fa-arrow-right"></i
       ></router-link>
     </div>
@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     avatar() {
-      if (this.data.value) {
+      if (this.data?.value) {
         return `PRO`;
       }
       return `SYT`;

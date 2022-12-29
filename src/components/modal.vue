@@ -47,7 +47,7 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(['changefilter', 'formatloadMorePageSize']),
+    ...mapMutations(['changefilter', 'fomatPageNumber']),
     showModal() {
       this.visible = true;
     },
@@ -56,7 +56,7 @@ export default {
       this.changefilter(state);
       this.visible = false;
       console.log(e.target.value);
-      this.formatloadMorePageSize()
+      this.fomatPageNumber();
     },
   },
   computed: {

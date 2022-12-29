@@ -1,7 +1,7 @@
 <template>
   <div class="listitem">
     <div class="listitem-list">
-      <Itemlist v-for="item in itemsListRender" :key="item.id" :data="item" />
+      <Itemlist v-for="item in itemsListRender" :key="item?.id" :data="item" />
     </div>
     <div class="listitem-load">
       <button :class="nodataCSS ? 'nodataCSS' : ''" @click="loadding">
@@ -16,49 +16,99 @@ import { mapActions, mapGetters, mapMutations } from 'vuex';
 import Itemlist from '@/components/itemlist.vue';
 export default {
   components: { Itemlist },
+  // data() {
+  //   return {
+  //     pageSize: 5,
+  //   };
+  // },
   methods: {
     ...mapActions(['getAllList']),
-    ...mapMutations(['getRenderList', 'loadMorePageSize']),
+    ...mapMutations(['getRenderList', 'addingPagesizeload']),
     loadding() {
-      console.log('load more');
-      this.loadMorePageSize(5)
+      this.addingPagesizeload(5);
       console.log(this.pageSize);
-      this.getRenderList(this.itemsListRender)
+      this.getRenderList(this.itemsListRender);
     },
     filterpagesize(arr, pageSize) {
-      let arr1 = [];
-      for (let i = 0; i < pageSize; i++) {
-        let arr2 = arr[i]
-        arr1.push(arr2)
+      let arrPushNew = [];
+      if (20 - pageSize < 5) {
+        for (let i = 0; i < 20; i++) {
+          arrPushNew.push(arr[i]);
+        }
+        return arrPushNew;
+      } else if (pageSize < 20) {
+        for (let i = 0; i < pageSize; i++) {
+          arrPushNew.push(arr[i]);
+        }
+        return arrPushNew;
       }
-      return arr1
-    }
+      return arr;
+    },
+    listpageSize(arr, number, pageSize) {
+      let arrPushNew = [];
+      const lastNumber = number - 1;
+      if (number * pageSize > arr.length) {
+        for (let i = lastNumber * pageSize; i < arr.length; i++) {
+          arrPushNew.push(arr[i]);
+        }
+        return arrPushNew;
+      } else {
+        for (let i = lastNumber * pageSize; i < number * pageSize; i++) {
+          arrPushNew.push(arr[i]);
+        }
+        return arrPushNew;
+      }
+    },
   },
   async created() {
     this.getAllList();
   },
   computed: {
-    ...mapGetters(['itemsList', 'filter', 'itemsProcess', 'itemSystem','valueDate', 'renderList','pageSize' ]),
+    ...mapGetters([
+      'itemsList',
+      'filter',
+      'itemsProcess',
+      'itemSystem',
+      'valueDate',
+      'renderList',
+      'pageNumber',
+      'pageSize',
+    ]),
     itemsListRender() {
-      if(this.filter == 'allEvent'){
-        return this.filterpagesize(this.itemsList, this.pageSize) 
+      if (this.filter == 'allEvent') {
+        // return this.itemsList;
+        // const initArray = this.itemsList;
+        const initArray = this.listpageSize(
+          this.itemsList,
+          this.pageNumber,
+          20
+        );
+        return this.filterpagesize(initArray, this.pageSize);
       } else if (this.filter == 'process') {
-        return this.itemsProcess.filter((item) => item.initialDay == this.valueDate);
+        return this.itemsProcess.filter(
+          (item) => item.initialDay == this.valueDate
+        );
       } else if (this.filter == 'system') {
-        return this.itemSystem.filter((item) => item.initialDay == this.valueDate);
+        return this.itemSystem.filter(
+          (item) => item.initialDay == this.valueDate
+        );
       }
       return [];
     },
     nodataCSS() {
-      if (this.itemsListRender.length < 5) {
+      if (
+        this.itemsListRender.length < 5 ||
+        this.itemsListRender.length == 20
+      ) {
         return true;
       }
       return false;
     },
   },
-  updated(){
-    this.getRenderList(this.itemsListRender)
-  }
+  updated() {
+    this.getRenderList(this.itemsListRender);
+    console.log(this.itemsListRender);
+  },
 };
 </script>
 
