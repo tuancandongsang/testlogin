@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <a-input-search placeholder="input search text" style="width: 70%" @search="onSearch" />
-    <p>Value: <b>{{ numberSearch }}</b></p>
+    <p>Total: <b>{{ numberSearch }}</b></p>
   </div>
 </template>
 <script >

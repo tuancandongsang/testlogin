@@ -1,7 +1,7 @@
 <template>
   <div class="listitem">
     <div class="listitem-list">
-      <Itemlist v-for="item in itemsListRender" :key="item.id" :data="item" />
+      <Itemlist v-for="item in itemsListRender" :key="item?.id" :data="item" />
     </div>
     <div class="listitem-load">
       <button :class="nodataCSS ? 'nodataCSS' : ''" @click="loadding">
@@ -28,8 +28,7 @@ export default {
     filterpagesize(arr, pageSize) {
       let arr1 = [];
       for (let i = 0; i < pageSize; i++) {
-        let arr2 = arr[i]
-        arr1.push(arr2)
+        arr1.push(arr[i])
       }
       return arr1
     }
@@ -50,7 +49,7 @@ export default {
       return [];
     },
     nodataCSS() {
-      if (this.itemsListRender.length < 5) {
+      if (this.itemsListRender.length < 5 || this.pageSize >= this.itemsList.length) {
         return true;
       }
       return false;

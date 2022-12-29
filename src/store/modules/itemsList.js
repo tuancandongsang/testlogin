@@ -46,8 +46,12 @@ const mutations = {
   getRenderList(state, render) {
     state.render = render
   },
-  loadMorePageSize(state, more5){
-    state.pageSize = state.pageSize + more5
+  loadMorePageSize(state, num){
+    if (state.pageSize + num > getters.itemsList(state).length) {
+      state.pageSize = getters.itemsList(state).length;
+    } else {
+      state.pageSize += num;
+    }
   },
   formatloadMorePageSize(state){
     state.pageSize = 5
