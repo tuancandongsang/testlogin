@@ -7,9 +7,7 @@ const state = {
   render: [],
   pageNumber: 1,
   pageSize: 5,
-
 };
-
 const getters = {
   itemsList: (state) => state.items,
   itemsProcess: (state) =>
@@ -22,7 +20,6 @@ const getters = {
   pageNumber: (state) => state.pageNumber,
   pageSize: (state) => state.pageSize,
   renderListTotal:(state) => state.render.length,
-
 };
 
 const actions = {

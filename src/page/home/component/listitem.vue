@@ -13,7 +13,7 @@
 
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex';
-import Itemlist from '../../../components/itemlist.vue';
+import Itemlist from '@/components/itemlist.vue';
 export default {
   components: { Itemlist },
   methods: {

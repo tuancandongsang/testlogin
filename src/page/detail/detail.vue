@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import listService from '../../api/listService';
+import listService from '@/api/listService';
 export default {
     props: ['id'],
     data(){
@@ -31,12 +31,10 @@ export default {
         const response = await listService.getListDetail(this.id)
         this.dataDetail = response.data
         console.log( this.dataDetail);
-        this.message = this.dataDetail.presentStatus
+        this.message = this.dataDetail.name +"  alo alo  "+ this.dataDetail.presentStatus
     }
-
 }
 </script>
-
 <style scoped lang="scss">
 .detail {
     padding: 20px;

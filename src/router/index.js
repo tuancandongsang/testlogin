@@ -8,7 +8,6 @@ import detail from '../page/detail/detail.vue'
 export const router = createRouter({
     history: createWebHistory(),
     routes: [
-        // { path: '/', component: home },
         { path: '/login', component: login },
         {
             path: '/', redirect: "/home",
