@@ -1,15 +1,14 @@
 <template>
   <div class="home">
     <Calendar v-if="filter == 'process'" />
-    <Search v-if="filter == 'system'" />
+    <Search v-if="filter == 'system' " />
+    <Search v-if="filter == 'allEvent' " />
     <Listitem />
-    <!-- :itemsList="itemsList" :valueSearch="valueSearch" -->
     <Pagination />
   </div>
 </template>
 
 <script>
-// import { mapActions, mapGetters } from 'vuex';
 import { mapGetters } from 'vuex';
 import Calendar from './component/calendar.vue';
 import Search from '../../components/search.vue';
@@ -20,18 +19,8 @@ export default {
   computed: {
     ...mapGetters([
       'filter',
-      // 'itemSystem',
-      // 'itemsProcess',
-      // 'itemsList',
-      // 'valueSearch',
     ]),
   },
-  // async created() {
-  //   await this.getAllList();
-  // },
-  // methods: {
-  //   ...mapActions(['getAllList']),
-  // },
 };
 </script>
 <style scoped lang="scss">

@@ -31,6 +31,7 @@ export default {
         const response = await listService.getListDetail(this.id)
         this.dataDetail = response.data
         console.log( this.dataDetail);
+        this.message = this.dataDetail.presentStatus
     }
 
 }

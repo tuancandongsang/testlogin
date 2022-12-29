@@ -23,6 +23,16 @@
             v-model="picked"
           />
         </div>
+        <div class="modal-radio-item">
+          <label for="allEvent">All Event</label><br />
+          <input
+            type="radio"
+            id="allEvent"
+            name="fav_language"
+            value="allEvent"
+            v-model="picked"
+          />
+        </div>
       </div>
     </a-modal>
   </div>
@@ -37,7 +47,7 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(['changefilter']),
+    ...mapMutations(['changefilter', 'formatloadMorePageSize']),
     showModal() {
       this.visible = true;
     },
@@ -46,6 +56,7 @@ export default {
       this.changefilter(state);
       this.visible = false;
       console.log(e.target.value);
+      this.formatloadMorePageSize()
     },
   },
   computed: {

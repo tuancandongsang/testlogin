@@ -1,15 +1,11 @@
 <template>
   <div class="search">
-    <a-input-search
-      placeholder="input search text"
-      style="width: 70%"
-      @search="onSearch"
-    />
-    <p>Value: <b>0</b></p>
+    <a-input-search placeholder="input search text" style="width: 70%" @search="onSearch" />
+    <p>Value: <b>{{ numberSearch }}</b></p>
   </div>
 </template>
 <script >
-// import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
 export default {
   data() {
     return {
@@ -21,7 +17,18 @@ export default {
       console.log(value);
     },
   },
-  // computed:{...mapGetters(['valueSearch']),}
+  computed: {
+    ...mapGetters(['valueSearch', 'filter', 'itemsList', 'itemSystem', 'itemsProcess']),
+    numberSearch() {
+      if (this.filter == 'allEvent') {
+        return this.itemsList.length
+      } else if (this.filter == 'system') {
+        return this.itemSystem.length
+      } else if (this.filter == 'process') {
+        return this.itemsProcess.length
+      } else return 0
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -29,7 +36,6 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
-  // margin:  15px 0;
   height: 60px;
   P {
     margin-top: 4px;

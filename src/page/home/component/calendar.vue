@@ -11,9 +11,10 @@
 </template>
 <script>
 import moment from 'moment';
+import { mapMutations } from 'vuex';
 export default {
   data() {
-    const dateFormat = 'YYYY/MM/DD';
+    const dateFormat = 'YYYY-MM-DD';
     const time = moment().format().slice(0, 10);
     return {
       value1: moment(time, dateFormat),
@@ -23,8 +24,10 @@ export default {
   },
   created() {
     this.changeTime();
+    this.updatedDate( this.time)
   },
   methods: {
+    ...mapMutations(['updatedDate', 'formatloadMorePageSize']),
     changeTime() {
       const time = moment().format().slice(0, 10);
       this.time = time;
@@ -32,8 +35,11 @@ export default {
     },
     onChange(date, dateString) {
       console.log(date, dateString);
+      this.updatedDate(dateString)
+      this.formatloadMorePageSize()
     },
   },
+  computed:{}
 };
 </script>
 

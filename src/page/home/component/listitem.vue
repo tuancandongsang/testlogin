@@ -1,7 +1,7 @@
 <template>
   <div class="listitem">
     <div class="listitem-list">
-      <Itemlist v-for="item in itemsList" :key="item.id" :data="item" />
+      <Itemlist v-for="item in itemsListRender" :key="item.id" :data="item" />
     </div>
     <div class="listitem-load">
       <button :class="nodataCSS ? 'nodataCSS' : ''" @click="loadding">
@@ -12,49 +12,53 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex';
+import { mapActions, mapGetters, mapMutations } from 'vuex';
 import Itemlist from '../../../components/itemlist.vue';
 export default {
   components: { Itemlist },
-  // props: {
-  //   itemsList: {
-  //     type: Array,
-  //     default: [],
-  //     required: true,
-  //   },
-  //   valueSearch: {
-  //     type: {
-  //       type: Number,
-  //     },
-  //   },
-  // },
   methods: {
     ...mapActions(['getAllList']),
+    ...mapMutations(['getRenderList', 'loadMorePageSize']),
     loadding() {
       console.log('load more');
+      this.loadMorePageSize(5)
+      console.log(this.pageSize);
+      this.getRenderList(this.itemsListRender)
     },
+    filterpagesize(arr, pageSize) {
+      let arr1 = [];
+      for (let i = 0; i < pageSize; i++) {
+        let arr2 = arr[i]
+        arr1.push(arr2)
+      }
+      return arr1
+    }
   },
   async created() {
     this.getAllList();
   },
   computed: {
-    ...mapGetters(['itemsList', 'filter', 'itemsProcess', 'itemSystem']),
-    itemsList() {
-      if (this.filter == 'process') {
-        return this.itemsProcess;
+    ...mapGetters(['itemsList', 'filter', 'itemsProcess', 'itemSystem','valueDate', 'renderList','pageSize' ]),
+    itemsListRender() {
+      if(this.filter == 'allEvent'){
+        return this.filterpagesize(this.itemsList, this.pageSize) 
+      } else if (this.filter == 'process') {
+        return this.itemsProcess.filter((item) => item.initialDay == this.valueDate);
       } else if (this.filter == 'system') {
-        return this.itemSystem;
+        return this.itemSystem.filter((item) => item.initialDay == this.valueDate);
       }
       return [];
     },
     nodataCSS() {
-      if (this.itemsList.length == 0) {
+      if (this.itemsListRender.length < 5) {
         return true;
       }
       return false;
     },
   },
-  // computed: { ...mapGetters(['itemsList', 'valueSearch']) },
+  updated(){
+    this.getRenderList(this.itemsListRender)
+  }
 };
 </script>
 
