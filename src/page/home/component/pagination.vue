@@ -5,7 +5,7 @@
       :total="renderListTotal"
       :showSizeChanger="false"
       @change="handleChangePage"
-      v-model:current="current"
+      v-model:current="currentPageNumber"
       v-model:pageSize="pageSize"
       size="small"
     />
@@ -17,7 +17,7 @@ import { mapActions, mapGetters, mapMutations } from 'vuex';
 export default {
   data() {
     return {
-      current: 1,
+      currentPageNumber: 1,
       pageSize: 20,
     };
   },

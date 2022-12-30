@@ -53,23 +53,23 @@ const mutations = {
       state.pageSize += num;
     }
   },
-    changepagenumber(state, num) {
-      state.pageNumber = num;
-    },
-    fomatPageNumber(state) {
-      state.pageNumber = 1;
-    },
-    formatpageSize(state, num) {
-      state.pageSize = num;
-    },
-    addingPagesizeload(state, num) {
-      state.pageSize += num;
-    },
-  };
+  changepagenumber(state, num) {
+    state.pageNumber = num;
+  },
+  fomatPageNumber(state) {
+    state.pageNumber = 1;
+  },
+  formatpageSize(state, num) {
+    state.pageSize = num;
+  },
+  addingPagesizeload(state, num) {
+    state.pageSize += num;
+  },
+};
 
-  export default {
-    state,
-    getters,
-    actions,
-    mutations,
-  };
+export default {
+  state,
+  getters,
+  actions,
+  mutations,
+};

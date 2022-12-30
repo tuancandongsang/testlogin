@@ -148,6 +148,7 @@ export default {
       font-size: 1rem;
       font-weight: 500;
       background-color: dodgerblue;
+      color: aliceblue;
       cursor: pointer;
 
       &:hover {
