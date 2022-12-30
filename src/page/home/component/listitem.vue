@@ -30,25 +30,23 @@ export default {
       this.getRenderList(this.itemsListRender);
     },
     filterpagesize(arr, pageSize) {
-<<<<<<< HEAD
       let arr1 = [];
       for (let i = 0; i < pageSize; i++) {
         arr1.push(arr[i])
-=======
-      let arrPushNew = [];
-      if (20 - pageSize < 5) {
-        for (let i = 0; i < 20; i++) {
-          arrPushNew.push(arr[i]);
+        let arrPushNew = [];
+        if (20 - pageSize < 5) {
+          for (let i = 0; i < 20; i++) {
+            arrPushNew.push(arr[i]);
+          }
+          return arrPushNew;
+        } else if (pageSize < 20) {
+          for (let i = 0; i < pageSize; i++) {
+            arrPushNew.push(arr[i]);
+          }
+          return arrPushNew;
         }
-        return arrPushNew;
-      } else if (pageSize < 20) {
-        for (let i = 0; i < pageSize; i++) {
-          arrPushNew.push(arr[i]);
-        }
-        return arrPushNew;
->>>>>>> c0c4f8c02b72f81c224f07c8fbb2af7e509e0c46
+        return arr;
       }
-      return arr;
     },
     listpageSize(arr, number, pageSize) {
       let arrPushNew = [];
@@ -102,14 +100,10 @@ export default {
       return [];
     },
     nodataCSS() {
-<<<<<<< HEAD
-      if (this.itemsListRender.length < 5 || this.pageSize >= this.itemsList.length) {
-=======
       if (
         this.itemsListRender.length < 5 ||
         this.itemsListRender.length == 20
       ) {
->>>>>>> c0c4f8c02b72f81c224f07c8fbb2af7e509e0c46
         return true;
       }
       return false;
@@ -119,7 +113,7 @@ export default {
     this.getRenderList(this.itemsListRender);
     console.log(this.itemsListRender);
   },
-};
+}
 </script>
 
 <style scoped lang="scss">
@@ -129,10 +123,12 @@ export default {
   border-radius: 4px;
   height: 85%;
   position: relative;
+
   &-list {
     height: 90%;
     overflow: auto;
   }
+
   &-load {
     position: absolute;
     width: 80%;
@@ -153,12 +149,15 @@ export default {
       font-weight: 500;
       background-color: dodgerblue;
       cursor: pointer;
+
       &:hover {
         background-color: rgb(80, 164, 248);
       }
     }
+
     .nodataCSS {
       background-color: #999;
+
       &:hover {
         background-color: #999;
       }

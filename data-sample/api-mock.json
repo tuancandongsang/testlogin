@@ -153,12 +153,8 @@
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
       "initialDay": "2022-12-29"
-<<<<<<< HEAD
-    },{
-=======
     },
     {
->>>>>>> c0c4f8c02b72f81c224f07c8fbb2af7e509e0c46
       "id": "15",
       "name": "AHU#15-ST",
       "time": "2022-12-29 13:21:42.683",
@@ -168,12 +164,7 @@
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
       "initialDay": "2022-12-29"
-<<<<<<< HEAD
-    }
-    ,
-=======
     },
->>>>>>> c0c4f8c02b72f81c224f07c8fbb2af7e509e0c46
     {
       "id": "16",
       "name": "AHU#16-ST",
@@ -261,20 +252,6 @@
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
       "initialDay": "2022-12-29"
-<<<<<<< HEAD
-    },
-    {
-      "id": "24",
-      "name": "AHU#24-ST",
-      "time": "2022-12-29 13:21:42.683",
-      "presentValue": "18.10 Deg",
-      "presentStatus": "LOW_LIMIT_WARN",
-      "previousState": "LOW_LIMIT",
-      "conf": "2022-12-29 13:21:42.683",
-      "value": "process",
-      "initialDay": "2022-12-29"
-=======
->>>>>>> c0c4f8c02b72f81c224f07c8fbb2af7e509e0c46
     }
   ]
 }

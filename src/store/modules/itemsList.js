@@ -46,32 +46,30 @@ const mutations = {
   getRenderList(state, render) {
     state.render = render;
   },
-<<<<<<< HEAD
-  loadMorePageSize(state, num){
+  loadMorePageSize(state, num) {
     if (state.pageSize + num > getters.itemsList(state).length) {
       state.pageSize = getters.itemsList(state).length;
     } else {
       state.pageSize += num;
     }
-=======
-  changepagenumber(state, num) {
-    state.pageNumber = num;
   },
-  fomatPageNumber(state) {
-    state.pageNumber = 1;
-  },
-  formatpageSize(state, num) {
-    state.pageSize = num;
-  },
-  addingPagesizeload(state, num) {
-    state.pageSize += num;
->>>>>>> c0c4f8c02b72f81c224f07c8fbb2af7e509e0c46
-  },
-};
+    changepagenumber(state, num) {
+      state.pageNumber = num;
+    },
+    fomatPageNumber(state) {
+      state.pageNumber = 1;
+    },
+    formatpageSize(state, num) {
+      state.pageSize = num;
+    },
+    addingPagesizeload(state, num) {
+      state.pageSize += num;
+    },
+  };
 
-export default {
-  state,
-  getters,
-  actions,
-  mutations,
-};
+  export default {
+    state,
+    getters,
+    actions,
+    mutations,
+  };
