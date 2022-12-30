@@ -25,12 +25,13 @@ export default {
 
   },
   methods: {
-    ...mapMutations(['changepagenumber', 'formatpageSize',]),
+    ...mapMutations(['changepagenumber', 'formatpageSize',"formatnodataCSSinit"]),
     ...mapActions(['getAllList']),
     handleChangePage(pageNumber, pageSize) {
       this.changepagenumber(pageNumber);
       console.log(pageNumber, pageSize);
       this.formatpageSize(5);
+      this.formatnodataCSSinit()
     },
     filterSize(arr, pageSize) {
       let arr1 = [];

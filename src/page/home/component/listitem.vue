@@ -18,17 +18,26 @@ export default {
   components: { Itemlist },
   methods: {
     ...mapActions(['getAllList']),
-    ...mapMutations(['getRenderList', 'addingPagesizeload']),
+    ...mapMutations(['getRenderList', 'addingPagesizeload', 'updatenodataCSSinit']),
     loadding() {
       this.addingPagesizeload(5);
       this.getRenderList(this.itemsListRender);
       this.hinden()
     },
     hinden() {
-      const alo = (this.pageNumber - 1) * 20 + this.itemsListRender.length
-      if (alo == this.itemsList.length) {
-        this.nodataCSSinit = true
+      if (this.filter == 'allEvent') {
+        const alo = (this.pageNumber - 1) * 20 + this.itemsListRender.length
+        if (alo == this.itemsList.length) {
+          this.updatenodataCSSinit()
+        }
       }
+      if (this.filter == 'process') {
+        const alo = (this.pageNumber - 1) * 20 + this.itemsListRender.length
+        if (alo == this.itemsProcess.filter((item) => item.initialDay == this.valueDate).length) {
+          this.updatenodataCSSinit()
+        }
+      }
+
     },
     filterpagesize(arr, pageSize) {
       let arrPushNew = [];
@@ -73,7 +82,7 @@ export default {
       'renderList',
       'pageNumber',
       'pageSize',
-      // 'nodataCSSinit'
+      'nodataCSSinit'
     ]),
     itemsListRender() {
       if (this.filter == 'allEvent') {
@@ -109,11 +118,11 @@ export default {
       return false;
     },
   },
-  data() {
-    return {
-      nodataCSSinit: false
-    }
-  },
+  // data() {
+  //   return {
+  //     nodataCSSinit: false
+  //   }
+  // },
   updated() {
     this.getRenderList(this.itemsListRender);
   },

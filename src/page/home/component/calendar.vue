@@ -23,7 +23,7 @@ export default {
     this.updatedDate(this.time);
   },
   methods: {
-    ...mapMutations(['updatedDate', 'fomatPageNumber', "formatpageSize"]),
+    ...mapMutations(['updatedDate', 'fomatPageNumber', "formatpageSize",'formatnodataCSSinit']),
     changeTimeToString() {
       const time = moment().format().slice(0, 10);
       this.time = time;
@@ -33,6 +33,7 @@ export default {
       this.updatedDate(dateString);
       this.fomatPageNumber();
       this.formatpageSize(5);
+      this.formatnodataCSSinit()
     },
   },
   computed: {},
