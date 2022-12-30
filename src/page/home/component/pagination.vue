@@ -22,9 +22,10 @@ export default {
   },
   async created() {
     await this.getAllList();
+
   },
   methods: {
-    ...mapMutations(['changepagenumber', 'formatpageSize']),
+    ...mapMutations(['changepagenumber', 'formatpageSize',]),
     ...mapActions(['getAllList']),
     handleChangePage(pageNumber, pageSize) {
       this.changepagenumber(pageNumber);
@@ -47,10 +48,21 @@ export default {
       'pageNumber',
       'renderListTotal',
       'filter',
+      "itemSystem",
+      'itemsProcess',
+      'valueDate'
     ]),
     renderListTotal() {
       if (this.filter == 'allEvent') {
         return this.itemsList.length;
+      }
+      if (this.filter == 'process') {
+        // return this.itemsProcess.length;
+        return this.itemsProcess.filter((item) => item.initialDay = this.valueDate).length
+
+      }
+      if (this.filter == 'system') {
+        return this.itemSystem.length;
       }
       return this.renderList.length;
     },

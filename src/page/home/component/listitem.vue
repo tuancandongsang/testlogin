@@ -26,38 +26,32 @@ export default {
     ...mapMutations(['getRenderList', 'addingPagesizeload']),
     loadding() {
       this.addingPagesizeload(5);
-      console.log(this.pageSize);
+      // console.log(this.pageSize);
       this.getRenderList(this.itemsListRender);
     },
     filterpagesize(arr, pageSize) {
-      let arr1 = [];
-      for (let i = 0; i < pageSize; i++) {
-        arr1.push(arr[i])
-        let arrPushNew = [];
-        if (20 - pageSize < 5) {
-          for (let i = 0; i < 20; i++) {
-            arrPushNew.push(arr[i]);
-          }
-          return arrPushNew;
-        } else if (pageSize < 20) {
-          for (let i = 0; i < pageSize; i++) {
-            arrPushNew.push(arr[i]);
-          }
-          return arrPushNew;
-        }
-        return arr;
-      }
-    },
-    listpageSize(arr, number, pageSize) {
       let arrPushNew = [];
-      const lastNumber = number - 1;
-      if (number * pageSize > arr.length) {
+      if (pageSize < 20) {
+        for (let i = 0; i < pageSize; i++) {
+          if (arr[i] == null) {
+            return arr;
+          }
+          arrPushNew.push(arr[i]);
+        }
+        return arrPushNew;
+      }
+      return arr;
+    },
+    listpageSize(arr, pageNumber, pageSize) {
+      let arrPushNew = [];
+      const lastNumber = pageNumber - 1;
+      if (pageNumber * pageSize > arr.length) {
         for (let i = lastNumber * pageSize; i < arr.length; i++) {
           arrPushNew.push(arr[i]);
         }
         return arrPushNew;
       } else {
-        for (let i = lastNumber * pageSize; i < number * pageSize; i++) {
+        for (let i = lastNumber * pageSize; i < pageNumber * pageSize; i++) {
           arrPushNew.push(arr[i]);
         }
         return arrPushNew;
@@ -65,7 +59,8 @@ export default {
     },
   },
   async created() {
-    this.getAllList();
+    await this.getAllList();
+    console.log("create",this.itemsProcess);
   },
   computed: {
     ...mapGetters([
@@ -80,8 +75,6 @@ export default {
     ]),
     itemsListRender() {
       if (this.filter == 'allEvent') {
-        // return this.itemsList;
-        // const initArray = this.itemsList;
         const initArray = this.listpageSize(
           this.itemsList,
           this.pageNumber,
@@ -111,7 +104,7 @@ export default {
   },
   updated() {
     this.getRenderList(this.itemsListRender);
-    console.log(this.itemsListRender);
+    // console.log(this.valueDate);
   },
 }
 </script>

@@ -64,7 +64,7 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "7",
@@ -75,7 +75,7 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "8",
@@ -108,7 +108,7 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "11",
@@ -119,7 +119,7 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "12",
@@ -130,7 +130,7 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "13",
@@ -141,7 +141,7 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "14",
@@ -152,7 +152,7 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "15",
@@ -163,7 +163,7 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "16",
@@ -174,7 +174,7 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "17",
@@ -185,7 +185,7 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "18",
@@ -196,7 +196,7 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "19",
@@ -207,7 +207,7 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "20",
@@ -218,7 +218,7 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "21",
@@ -229,7 +229,7 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "22",
@@ -240,11 +240,320 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-29"
+      "initialDay": "2022-12-30"
     },
     {
       "id": "23",
       "name": "AHU#23-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "24",
+      "name": "AHU#24-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "25",
+      "name": "AHU#25-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "26",
+      "name": "AHU#26-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "27",
+      "name": "AHU#27-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "28",
+      "name": "AHU#28-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    }
+    ,
+    {
+      "id": "29",
+      "name": "AHU#29-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "30",
+      "name": "AHU#30-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "31",
+      "name": "AHU#31-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "32",
+      "name": "AHU#32-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "33",
+      "name": "AHU#33-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "34",
+      "name": "AHU#34-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "35",
+      "name": "AHU#35-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "36",
+      "name": "AHU#36-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "37",
+      "name": "AHU#37-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "38",
+      "name": "AHU#38-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "39",
+      "name": "AHU#39-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-30"
+    },
+    {
+      "id": "40",
+      "name": "AHU#40-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-29"
+    },
+    {
+      "id": "41",
+      "name": "AHU#41-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-29"
+    },
+    {
+      "id": "42",
+      "name": "AHU#42-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-29"
+    },
+    {
+      "id": "43",
+      "name": "AHU#43-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-29"
+    },
+    {
+      "id": "44",
+      "name": "AHU#44-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-29"
+    },
+    {
+      "id": "45",
+      "name": "AHU#45-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-29"
+    },
+    {
+      "id": "46",
+      "name": "AHU#46-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-29"
+    },
+    {
+      "id": "47",
+      "name": "AHU#47-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-29"
+    },
+    {
+      "id": "48",
+      "name": "AHU#48-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-29"
+    },
+    {
+      "id": "49",
+      "name": "AHU#49-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-29"
+    },
+    {
+      "id": "50",
+      "name": "AHU#50-ST",
+      "time": "2022-12-29 13:21:42.683",
+      "presentValue": "18.10 Deg",
+      "presentStatus": "LOW_LIMIT_WARN",
+      "previousState": "LOW_LIMIT",
+      "conf": "2022-12-29 13:21:42.683",
+      "value": "process",
+      "initialDay": "2022-12-29"
+    },
+    {
+      "id": "51",
+      "name": "AHU#51-ST",
       "time": "2022-12-29 13:21:42.683",
       "presentValue": "18.10 Deg",
       "presentStatus": "LOW_LIMIT_WARN",

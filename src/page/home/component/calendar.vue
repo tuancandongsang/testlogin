@@ -23,15 +23,14 @@ export default {
     };
   },
   created() {
-    this.changeTime();
+    this.changeTimeToString();
     this.updatedDate(this.time);
   },
   methods: {
     ...mapMutations(['updatedDate']),
-    changeTime() {
+    changeTimeToString() {
       const time = moment().format().slice(0, 10);
       this.time = time;
-      console.log(time.slice(0, 10));
     },
     onChange(date, dateString) {
       console.log(date, dateString);
