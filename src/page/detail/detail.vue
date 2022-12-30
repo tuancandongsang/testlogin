@@ -19,6 +19,7 @@
 
 <script>
 import listService from '@/api/listService';
+import "./Detail.scss"
 export default {
     props: ['id'],
     data(){
@@ -35,52 +36,3 @@ export default {
     }
 }
 </script>
-<style scoped lang="scss">
-.detail {
-    padding: 20px;
-    position: relative;
-    height: 100%;
-
-    &-container {
-        padding: 10px;
-
-        h2 {
-            text-align: center;
-        }
-        span{
-            font-size: 1rem;
-            color: tomato;
-            font-weight: 600;
-        }
-        textarea{
-            width: 100%;
-            height: 200px;
-            padding: 10px;
-            border: 1px solid #999;
-            border-radius: 8px;
-        }
-    }
-
-    &-btn {
-        width: 90%;
-        position: absolute;
-        bottom: 0;
-
-        button {
-            width: 100%;
-            padding: 4px 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 500;
-            background-color: dodgerblue;
-            color: #333;
-            cursor: pointer;
-
-            &:hover {
-                background-color: rgb(80, 164, 248);
-            }
-        }
-    }
-}
-</style>

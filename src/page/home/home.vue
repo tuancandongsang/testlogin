@@ -3,7 +3,7 @@
     <Calendar v-if="filter == 'process'" />
     <Search v-if="filter == 'system' " />
     <Search v-if="filter == 'allEvent' " />
-    <Listitem />
+    <ListVue />
     <Pagination />
   </div>
 </template>
@@ -12,10 +12,10 @@
 import { mapGetters } from 'vuex';
 import Calendar from './component/calendar.vue';
 import Search from '@/components/search.vue';
-import Listitem from './component/listitem.vue';
+import ListVue from './component/ListVue.vue';
 import Pagination from './component/pagination.vue';
 export default {
-  components: { Listitem, Pagination, Search, Calendar },
+  components: { ListVue, Pagination, Search, Calendar },
   computed: {
     ...mapGetters([
       'filter',

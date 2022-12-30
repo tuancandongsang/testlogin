@@ -1,24 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import NotFound from '../page/not-found-page/NotFoundPage.vue';
-import login from '../page/login/login.vue';
-import home from '../page/home/home.vue';
+import NotFound from '../page/PageNotFound/NotFoundPage.vue';
+import Login from '../page/Login/Login.vue';
+import Home from '../page/Home/Home.vue';
 import layout from '../layout/layout.vue'
-import detail from '../page/detail/detail.vue'
+import Detail from '../page/Detail/Detail.vue'
 
 export const router = createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/login', component: login },
+        { path: '/login', component: Login },
         {
             path: '/', redirect: "/home",
             component: layout,
             children: [{
                 path: '/home',
-                component: home
+                component: Home
             },
             {
                 path: '/:id',
-                component: detail,
+                component: Detail,
                 props: true,
             }
             ]
