@@ -1,11 +1,7 @@
 <template>
   <div class="calendar">
     <a-space direction="vertical">
-      <a-date-picker
-        v-model:value="value1"
-        :format="dateFormat"
-        @change="onChange"
-      />
+      <a-date-picker v-model:value="value1" :format="dateFormat" @change="onChange" />
     </a-space>
   </div>
 </template>
@@ -27,7 +23,7 @@ export default {
     this.updatedDate(this.time);
   },
   methods: {
-    ...mapMutations(['updatedDate']),
+    ...mapMutations(['updatedDate', 'fomatPageNumber', "formatpageSize"]),
     changeTimeToString() {
       const time = moment().format().slice(0, 10);
       this.time = time;
@@ -35,6 +31,8 @@ export default {
     onChange(date, dateString) {
       console.log(date, dateString);
       this.updatedDate(dateString);
+      this.fomatPageNumber();
+      this.formatpageSize(5);
     },
   },
   computed: {},

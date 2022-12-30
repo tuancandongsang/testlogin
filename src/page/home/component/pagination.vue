@@ -57,9 +57,7 @@ export default {
         return this.itemsList.length;
       }
       if (this.filter == 'process') {
-        // return this.itemsProcess.length;
-        return this.itemsProcess.filter((item) => item.initialDay = this.valueDate).length
-
+        return this.itemsProcess.filter((item) => item.initialDay == this.valueDate).length
       }
       if (this.filter == 'system') {
         return this.itemSystem.length;

@@ -16,17 +16,11 @@ import { mapActions, mapGetters, mapMutations } from 'vuex';
 import Itemlist from '@/components/itemlist.vue';
 export default {
   components: { Itemlist },
-  // data() {
-  //   return {
-  //     pageSize: 5,
-  //   };
-  // },
   methods: {
     ...mapActions(['getAllList']),
     ...mapMutations(['getRenderList', 'addingPagesizeload']),
     loadding() {
       this.addingPagesizeload(5);
-      // console.log(this.pageSize);
       this.getRenderList(this.itemsListRender);
     },
     filterpagesize(arr, pageSize) {
@@ -60,7 +54,7 @@ export default {
   },
   async created() {
     await this.getAllList();
-    console.log("create",this.itemsProcess);
+    console.log("create", this.itemsProcess);
   },
   computed: {
     ...mapGetters([
@@ -79,12 +73,16 @@ export default {
           this.itemsList,
           this.pageNumber,
           20
-        );
+        )
         return this.filterpagesize(initArray, this.pageSize);
       } else if (this.filter == 'process') {
-        return this.itemsProcess.filter(
-          (item) => item.initialDay == this.valueDate
+        const arrrr = this.itemsProcess.filter((item) => item.initialDay == this.valueDate)
+        const initArray = this.listpageSize(
+          arrrr,
+          this.pageNumber,
+          20
         );
+        return this.filterpagesize(initArray, this.pageSize);
       } else if (this.filter == 'system') {
         return this.itemSystem.filter(
           (item) => item.initialDay == this.valueDate
@@ -95,16 +93,22 @@ export default {
     nodataCSS() {
       if (
         this.itemsListRender.length < 5 ||
-        this.itemsListRender.length == 20
+        this.itemsListRender.length == 20 ||
+        this.nodataCSSinit == true
       ) {
         return true;
       }
-      return false;
+      return this.nodataCSSinit;
     },
+  },
+  data() {
+    return {
+      nodataCSSinit: false
+    }
   },
   updated() {
     this.getRenderList(this.itemsListRender);
-    // console.log(this.valueDate);
+
   },
 }
 </script>
