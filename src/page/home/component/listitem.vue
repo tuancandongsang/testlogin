@@ -22,6 +22,13 @@ export default {
     loadding() {
       this.addingPagesizeload(5);
       this.getRenderList(this.itemsListRender);
+      this.hinden()
+    },
+    hinden() {
+      const alo = (this.pageNumber - 1) * 20 + this.itemsListRender.length
+      if (alo == this.itemsList.length) {
+        this.nodataCSSinit = true
+      }
     },
     filterpagesize(arr, pageSize) {
       let arrPushNew = [];
@@ -54,7 +61,7 @@ export default {
   },
   async created() {
     await this.getAllList();
-    console.log("create", this.itemsProcess);
+    console.log("create", this.itemsListRender.length, this.itemsList.length, (this.pageNumber - 1) * 20 + this.itemsListRender.length);
   },
   computed: {
     ...mapGetters([
@@ -66,6 +73,7 @@ export default {
       'renderList',
       'pageNumber',
       'pageSize',
+      // 'nodataCSSinit'
     ]),
     itemsListRender() {
       if (this.filter == 'allEvent') {
@@ -98,7 +106,7 @@ export default {
       ) {
         return true;
       }
-      return this.nodataCSSinit;
+      return false;
     },
   },
   data() {
@@ -108,7 +116,6 @@ export default {
   },
   updated() {
     this.getRenderList(this.itemsListRender);
-
   },
 }
 </script>

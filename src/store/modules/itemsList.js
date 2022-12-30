@@ -7,6 +7,7 @@ const state = {
   render: [],
   pageNumber: 1,
   pageSize: 5,
+  // nodataCSSinit:false
 };
 const getters = {
   itemsList: (state) => state.items,
@@ -20,6 +21,7 @@ const getters = {
   pageNumber: (state) => state.pageNumber,
   renderListTotal: (state) => state.render.length,
   pageSize: (state) => state.pageSize,
+  // nodataCSSinit:(state) => state.nodataCSSinit
 };
 
 const actions = {
@@ -62,6 +64,12 @@ const mutations = {
   formatpageSize(state, num) {
     state.pageSize = num;
   },
+  // formatnodataCSSinit(state){
+  //   state.nodataCSSinit = false
+  // },
+  // updatenodataCSSinit(state){
+  //   state.nodataCSSinit= true
+  // },
   addingPagesizeload(state, num) {
     state.pageSize += num;
   },
