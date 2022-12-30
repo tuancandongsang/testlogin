@@ -5,7 +5,7 @@
       :total="renderListTotal"
       :showSizeChanger="false"
       @change="handleChangePage"
-      v-model:current="currentPageNumber"
+      v-model:current="pageNumber"
       v-model:pageSize="pageSize"
       size="small"
     />
@@ -17,13 +17,11 @@ import { mapActions, mapGetters, mapMutations } from 'vuex';
 export default {
   data() {
     return {
-      currentPageNumber: 1,
       pageSize: 20,
     };
   },
   async created() {
     await this.getAllList();
-    // console.log(this.filterSize(this.itemsList, this.pageSize));
   },
   methods: {
     ...mapMutations(['changepagenumber', 'formatpageSize']),
