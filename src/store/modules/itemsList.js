@@ -18,8 +18,8 @@ const getters = {
   valueSearch: (state) => state.items.length,
   renderList: (state) => state.render,
   pageNumber: (state) => state.pageNumber,
+  renderListTotal: (state) => state.render.length,
   pageSize: (state) => state.pageSize,
-  renderListTotal:(state) => state.render.length,
 };
 
 const actions = {
@@ -41,21 +41,32 @@ const mutations = {
     state.filter = filterState;
   },
   updatedDate(state, date) {
-    state.valueDate = date
+    state.valueDate = date;
   },
   getRenderList(state, render) {
-    state.render = render
+    state.render = render;
   },
+<<<<<<< HEAD
   loadMorePageSize(state, num){
     if (state.pageSize + num > getters.itemsList(state).length) {
       state.pageSize = getters.itemsList(state).length;
     } else {
       state.pageSize += num;
     }
+=======
+  changepagenumber(state, num) {
+    state.pageNumber = num;
   },
-  formatloadMorePageSize(state){
-    state.pageSize = 5
-  }
+  fomatPageNumber(state) {
+    state.pageNumber = 1;
+  },
+  formatpageSize(state, num) {
+    state.pageSize = num;
+  },
+  addingPagesizeload(state, num) {
+    state.pageSize += num;
+>>>>>>> c0c4f8c02b72f81c224f07c8fbb2af7e509e0c46
+  },
 };
 
 export default {

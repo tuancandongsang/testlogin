@@ -24,10 +24,10 @@ export default {
   },
   created() {
     this.changeTime();
-    this.updatedDate( this.time)
+    this.updatedDate(this.time);
   },
   methods: {
-    ...mapMutations(['updatedDate', 'formatloadMorePageSize']),
+    ...mapMutations(['updatedDate']),
     changeTime() {
       const time = moment().format().slice(0, 10);
       this.time = time;
@@ -35,11 +35,10 @@ export default {
     },
     onChange(date, dateString) {
       console.log(date, dateString);
-      this.updatedDate(dateString)
-      this.formatloadMorePageSize()
+      this.updatedDate(dateString);
     },
   },
-  computed:{}
+  computed: {},
 };
 </script>
 
