@@ -18,26 +18,33 @@ export default {
   components: { Itemlist },
   methods: {
     ...mapActions(['getAllList']),
-    ...mapMutations(['getRenderList', 'addingPagesizeload', 'updatenodataCSSinit']),
+    ...mapMutations([
+      'getRenderList',
+      'addingPagesizeload',
+      'updatenodataCSSinit',
+    ]),
     loadding() {
       this.addingPagesizeload(5);
       this.getRenderList(this.itemsListRender);
-      this.hinden()
+      this.hinden();
     },
     hinden() {
       if (this.filter == 'allEvent') {
-        const alo = (this.pageNumber - 1) * 20 + this.itemsListRender.length
+        const alo = (this.pageNumber - 1) * 20 + this.itemsListRender.length;
         if (alo == this.itemsList.length) {
-          this.updatenodataCSSinit()
+          this.updatenodataCSSinit();
         }
       }
       if (this.filter == 'process') {
-        const alo = (this.pageNumber - 1) * 20 + this.itemsListRender.length
-        if (alo == this.itemsProcess.filter((item) => item.initialDay == this.valueDate).length) {
-          this.updatenodataCSSinit()
+        const alo = (this.pageNumber - 1) * 20 + this.itemsListRender.length;
+        if (
+          alo ==
+          this.itemsProcess.filter((item) => item.initialDay == this.valueDate)
+            .length
+        ) {
+          this.updatenodataCSSinit();
         }
       }
-
     },
     filterpagesize(arr, pageSize) {
       let arrPushNew = [];
@@ -70,7 +77,7 @@ export default {
   },
   async created() {
     await this.getAllList();
-    console.log("create", this.itemsListRender.length, this.itemsList.length, (this.pageNumber - 1) * 20 + this.itemsListRender.length);
+    console.log('create', this.itemsList);
   },
   computed: {
     ...mapGetters([
@@ -82,7 +89,7 @@ export default {
       'renderList',
       'pageNumber',
       'pageSize',
-      'nodataCSSinit'
+      'nodataCSSinit',
     ]),
     itemsListRender() {
       if (this.filter == 'allEvent') {
@@ -90,15 +97,13 @@ export default {
           this.itemsList,
           this.pageNumber,
           20
-        )
+        );
         return this.filterpagesize(initArray, this.pageSize);
       } else if (this.filter == 'process') {
-        const arrrr = this.itemsProcess.filter((item) => item.initialDay == this.valueDate)
-        const initArray = this.listpageSize(
-          arrrr,
-          this.pageNumber,
-          20
+        const arrrr = this.itemsProcess.filter(
+          (item) => item.initialDay == this.valueDate
         );
+        const initArray = this.listpageSize(arrrr, this.pageNumber, 20);
         return this.filterpagesize(initArray, this.pageSize);
       } else if (this.filter == 'system') {
         return this.itemSystem.filter(
@@ -126,7 +131,7 @@ export default {
   updated() {
     this.getRenderList(this.itemsListRender);
   },
-}
+};
 </script>
 
 <style scoped lang="scss">
