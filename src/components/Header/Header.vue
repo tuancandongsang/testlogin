@@ -1,25 +1,30 @@
 <template>
   <div class="header">
     <div class="header-menu">
-      <drawer />
+      <drawer>
+        <template #headerMenu>
+          <div class="drawer-logout">
+            <router-link to="/login"><p>Log Out</p></router-link>
+          </div>
+        </template>
+      </drawer>
     </div>
     <div class="header-noty">
       <div class="header-noty-filter">
         <Modal />
       </div>
       <div class="header-noty-bell">
-        <span class="header-noty-bell-qty">1</span
-        > <Popconfirm />
+        <span class="header-noty-bell-qty">1</span> <Popconfirm />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Popconfirm from '../Popconfirm.vue'
+import Popconfirm from '../Popconfirm.vue';
 import drawer from '../../components/drawer.vue';
 import Modal from '../../components/modal.vue';
-import "./Header.scss"
+import './Header.scss';
 export default {
   components: { Modal, drawer, Popconfirm },
 };

@@ -10,9 +10,7 @@
       :visible="visible"
       @close="onClose"
     >
-      <div class="drawer-logout">
-        <router-link to="/login"><p>Log Out</p></router-link>
-      </div>
+      <slot name="headerMenu"></slot>
     </a-drawer>
   </div>
 </template>
@@ -37,20 +35,5 @@ export default {
 <style lang="scss" scoped>
 .drawer {
   position: relative;
-  &-logout {
-    position: absolute;
-    padding: 8px 12px;
-    background-color: dodgerblue;
-    border-radius: 8px;
-    bottom: 20px;
-    width: 75%;
-    p {
-      color: #000;
-      font-weight: 500;
-      font-size: 1rem;
-      text-align: center;
-      margin: 0;
-    }
-  }
 }
 </style>
