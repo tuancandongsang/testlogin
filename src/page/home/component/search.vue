@@ -1,34 +1,28 @@
 <template>
   <div class="search">
-    <a-input-search placeholder="input search text" style="width: 70%" @search="onSearch" />
-    <p>Total: <b>{{ numberSearch }}</b></p>
+    <Search />
+    <p>
+      Total: <b>{{ numberSearch }}</b>
+    </p>
   </div>
 </template>
 <script >
 import { mapGetters } from 'vuex';
+import Search from '@/components/Search/index.vue';
 export default {
-  data() {
-    return {
-      value: '',
-    };
-  },
-  methods: {
-    onSearch(value) {
-      console.log(value);
-    },
-  },
+  components: { Search },
   computed: {
-    ...mapGetters(['valueSearch', 'filter', 'itemsList', 'itemSystem', 'itemsProcess']),
+    ...mapGetters(['filter', 'itemsList', 'itemSystem', 'itemsProcess']),
     numberSearch() {
       if (this.filter == 'allEvent') {
-        return this.itemsList.length
+        return this.itemsList.length;
       } else if (this.filter == 'system') {
-        return this.itemSystem.length
+        return this.itemSystem.length;
       } else if (this.filter == 'process') {
-        return this.itemsProcess.length
-      } else return 0
-    }
-  }
+        return this.itemsProcess.length;
+      } else return 0;
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
