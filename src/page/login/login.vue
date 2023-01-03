@@ -46,6 +46,7 @@
 import { i18n } from '@/config/setup-i18n';
 import { DEFAULT_LANG } from '@/constants/index';
 import './Login.scss';
+import {setJwtToken} from '@/utils/helpers'
 
 export default {
   data: () => {
@@ -76,6 +77,7 @@ export default {
         this.messageError = false;
         this.messageSuccess = true;
         setTimeout(() => {
+          setJwtToken('tuancandongsang')
           this.$router.push('/home');
         }, 2000);
       }

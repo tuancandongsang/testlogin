@@ -1,5 +1,5 @@
 // Short duration JWT token (5-10 min)
-export function setJwtToken(token: string) {
+export function setJwtToken(token) {
   sessionStorage.setItem("jwt", token);
 }
 export function getJwtToken() {
@@ -13,7 +13,7 @@ export function removetJwtToken() {
 export function getRefreshToken() {
   return sessionStorage.getItem("refreshToken");
 }
-export function setRefreshToken(token: string) {
+export function setRefreshToken(token) {
   sessionStorage.setItem("refreshToken", token);
 }
 export function removeRefreshToken() {
@@ -25,7 +25,7 @@ export function removeRefreshToken() {
 export function geturl() {
   return sessionStorage.getItem("url");
 }
-export function seturl(token: string) {
+export function seturl(token) {
   sessionStorage.setItem("url", token);
 }
 export function removeUrl() {
