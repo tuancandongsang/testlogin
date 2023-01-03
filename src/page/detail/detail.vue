@@ -33,7 +33,7 @@
 
 <script>
 import listService from '@/api/listService';
-import Button from "../../components/Button/Button.vue"
+import Button from "../../components/Button/Button.vue";
 import './Detail.scss';
 export default {
   components:{Button},

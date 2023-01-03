@@ -5,7 +5,7 @@
 </template>
 <script>
 import { mapMutations } from 'vuex';
-import { timeChangeString, dateFormat } from '../../utils/dateMoment'
+import { timeChangeString, dateFormat } from '@/utils/dateMoment'
 export default {
   data() {
     return {

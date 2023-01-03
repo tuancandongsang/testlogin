@@ -1,5 +1,5 @@
 import request from './request';
-import {API_ENDPOINT} from '../constants'
+import {API_ENDPOINT} from '@/constants'
 
 class listService {
   constructor() {

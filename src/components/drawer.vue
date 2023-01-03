@@ -16,9 +16,15 @@
 </template>
   <script>
 export default {
+  props:{
+    placement:{
+      type:String,
+      required: true
+    }
+  },
   data() {
     return {
-      placement: 'left',
+      // placement: 'left',
       visible: false,
     };
   },

@@ -1,7 +1,7 @@
 <template>
   <div class="listitem">
     <div class="listitem-list">
-      <Itemlist v-for="item in itemsListRender" :key="item?.id" :data="item" />
+      <ItemList v-for="item in itemsListRender" :key="item?.id" :data="item" />
     </div>
     <div class="listitem-load" @click="loadding">
       <Button :nodataCSS="nodataCSS ? 'button-disabled' : ''" content="Load More" />
@@ -11,13 +11,13 @@
 
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex';
-import { listpageSize, filterpagesize } from "@/utils/common"
+import { listpageSize, filterpagesize } from "@/utils/common";
 
-import Itemlist from '@/components/itemlist.vue';
-import Button from '@/components/Button/Button.vue'
+import ItemList from '@/components/ItemList.vue';
+import Button from '@/components/Button/Button.vue';
 
 export default {
-  components: { Itemlist, Button },
+  components: { ItemList, Button },
   methods: {
     ...mapActions(['getAllList']),
     ...mapMutations([
