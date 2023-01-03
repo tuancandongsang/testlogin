@@ -26,10 +26,14 @@
     }
   }
 }
-.drawer-logout {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  width: 75%;
-  transform: translate(-50%, 0%);
+
+.drawer {
+  position: relative;
+  &-logout {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 75%;
+    transform: translate(-50%, 0%);
+  }
 }
