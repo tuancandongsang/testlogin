@@ -14,6 +14,7 @@
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex';
 import Itemlist from '@/components/itemlist.vue';
+import {listpageSize , filterpagesize} from "../../../utils/common"
 export default {
   components: { Itemlist },
   methods: {
@@ -46,34 +47,6 @@ export default {
         }
       }
     },
-    filterpagesize(arr, pageSize) {
-      let arrPushNew = [];
-      if (pageSize < 20) {
-        for (let i = 0; i < pageSize; i++) {
-          if (arr[i] == null) {
-            return arr;
-          }
-          arrPushNew.push(arr[i]);
-        }
-        return arrPushNew;
-      }
-      return arr;
-    },
-    listpageSize(arr, pageNumber, pageSize) {
-      let arrPushNew = [];
-      const lastNumber = pageNumber - 1;
-      if (pageNumber * pageSize > arr.length) {
-        for (let i = lastNumber * pageSize; i < arr.length; i++) {
-          arrPushNew.push(arr[i]);
-        }
-        return arrPushNew;
-      } else {
-        for (let i = lastNumber * pageSize; i < pageNumber * pageSize; i++) {
-          arrPushNew.push(arr[i]);
-        }
-        return arrPushNew;
-      }
-    },
   },
   async created() {
     await this.getAllList();
@@ -93,18 +66,18 @@ export default {
     ]),
     itemsListRender() {
       if (this.filter == 'allEvent') {
-        const initArray = this.listpageSize(
+        const initArray = listpageSize(
           this.itemsList,
           this.pageNumber,
           20
         );
-        return this.filterpagesize(initArray, this.pageSize);
+        return filterpagesize(initArray, this.pageSize);
       } else if (this.filter == 'process') {
         const arrrr = this.itemsProcess.filter(
           (item) => item.initialDay == this.valueDate
         );
-        const initArray = this.listpageSize(arrrr, this.pageNumber, 20);
-        return this.filterpagesize(initArray, this.pageSize);
+        const initArray = listpageSize(arrrr, this.pageNumber, 20);
+        return filterpagesize(initArray, this.pageSize);
       } else if (this.filter == 'system') {
         return this.itemSystem.filter(
           (item) => item.initialDay == this.valueDate
