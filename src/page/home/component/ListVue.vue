@@ -123,11 +123,6 @@ export default {
       return false;
     },
   },
-  // data() {
-  //   return {
-  //     nodataCSSinit: false
-  //   }
-  // },
   updated() {
     this.getRenderList(this.itemsListRender);
   },

@@ -1,9 +1,6 @@
 import request from './request';
+import {API_ENDPOINT} from '../constants'
 
-const API_ENDPOINT = {
-  LIST_DETAIL: '/list',
-  LIST_ALL: '/list',
-};
 class listService {
   constructor() {
     if (listService._instance) {
