@@ -1,21 +1,18 @@
 <template>
   <div class="calendar">
     <a-space direction="vertical">
-      <a-date-picker v-model:value="value1" :format="dateFormat" @change="onChange" />
+      <a-date-picker v-model:value="value" :format="dateFormat" @change="onChange" />
     </a-space>
   </div>
 </template>
 <script>
-import moment from 'moment';
 import { mapMutations } from 'vuex';
+import {timeChangeString,dateFormat} from '../../utils/dateMoment'
 export default {
   data() {
-    const dateFormat = 'YYYY-MM-DD';
-    const time = moment().format().slice(0, 10);
     return {
-      value1: moment(time, dateFormat),
-      dateFormat,
-      time,
+      value: dateFormat,
+      time : timeChangeString,
     };
   },
   created() {
@@ -25,8 +22,7 @@ export default {
   methods: {
     ...mapMutations(['updatedDate', 'fomatPageNumber', "formatpageSize",'formatnodataCSSinit']),
     changeTimeToString() {
-      const time = moment().format().slice(0, 10);
-      this.time = time;
+      this.time = timeChangeString;
     },
     onChange(date, dateString) {
       console.log(date, dateString);
