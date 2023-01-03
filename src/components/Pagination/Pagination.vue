@@ -1,15 +1,6 @@
 <template>
-  <div class="pagination">
-    <a-pagination
-      showLessItems
-      :total="renderListTotal"
-      :showSizeChanger="false"
-      @change="handleChangePage"
-      v-model:current="pageNumber"
-      v-model:pageSize="pageSize"
-      size="small"
-    />
-  </div>
+  <a-pagination showLessItems :total="renderListTotal" :showSizeChanger="false" @change="handleChangePage"
+    v-model:current="pageNumber" v-model:pageSize="pageSize" size="small" />
 </template>
 
 <script>
@@ -25,7 +16,7 @@ export default {
 
   },
   methods: {
-    ...mapMutations(['changepagenumber', 'formatpageSize',"formatnodataCSSinit"]),
+    ...mapMutations(['changepagenumber', 'formatpageSize', "formatnodataCSSinit"]),
     ...mapActions(['getAllList']),
     handleChangePage(pageNumber, pageSize) {
       this.changepagenumber(pageNumber);
@@ -68,16 +59,3 @@ export default {
   },
 };
 </script>
-
-<style scoped lang="scss">
-.pagination {
-  font-weight: 500;
-  position: absolute;
-  bottom: 10px;
-  right: 50%;
-  transform: translate(50%, 0);
-  width: 70%;
-  display: flex;
-  justify-content: center;
-}
-</style>

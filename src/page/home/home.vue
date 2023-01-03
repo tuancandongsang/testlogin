@@ -1,10 +1,15 @@
 <template>
   <div class="home">
-    <Calendar v-if="filter == 'process'" />
+    <div class="calendar" v-if="filter == 'process'">
+      <Calendar />
+    </div>
     <Search v-if="filter == 'system'" />
     <Search v-if="filter == 'allEvent'" />
     <ListVue />
-    <Pagination />
+    <div class="pagination">
+      <Pagination />
+    </div>
+
   </div>
 </template>
 
@@ -14,6 +19,7 @@ import Calendar from '@/components/Celendar/Calendar.vue';
 import Search from './component/search.vue';
 import ListVue from './component/ListVue.vue';
 import Pagination from '@/components/Pagination/Pagination.vue';
+import "./Home.scss"
 export default {
   components: { ListVue, Pagination, Search, Calendar },
   computed: {
@@ -21,9 +27,3 @@ export default {
   },
 };
 </script>
-<style scoped lang="scss">
-.home {
-  padding: 10px;
-  height: 100%;
-}
-</style>
