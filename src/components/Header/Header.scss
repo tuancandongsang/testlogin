@@ -9,8 +9,6 @@
     display: flex;
     gap: 10px;
 
-    &-filter {}
-
     &-bell {
       position: relative;
 
@@ -31,17 +29,8 @@
 
 .drawer-logout {
   position: absolute;
-  padding: 8px 12px;
-  background-color: dodgerblue;
-  border-radius: 8px;
   bottom: 20px;
+  left: 50%;
   width: 75%;
-
-  p {
-    color: #000;
-    font-weight: 500;
-    font-size: 1rem;
-    text-align: center;
-    margin: 0;
-  }
+  transform: translate(-50%, 0%);
 }

@@ -1,13 +1,16 @@
 <template>
   <div class="header">
     <div class="header-menu">
-      <drawer>
+      <Drawer>
         <template #headerMenu>
           <div class="drawer-logout">
-            <router-link to="/login"><p>Log Out</p></router-link>
+            <router-link to="/login">
+              <Button content="Log Out" />
+            </router-link>
+
           </div>
         </template>
-      </drawer>
+      </Drawer>
     </div>
     <div class="header-noty">
       <div class="header-noty-filter">
@@ -22,10 +25,11 @@
 
 <script>
 import Popconfirm from '../Popconfirm.vue';
-import drawer from '@/components/drawer.vue';
+import Drawer from '@/components/Drawer.vue';
 import Modal from '@/components/modal.vue';
 import './Header.scss';
+import Button from '../Button/Button.vue'
 export default {
-  components: { Modal, drawer, Popconfirm },
+  components: { Modal, Drawer, Popconfirm, Button },
 };
 </script>

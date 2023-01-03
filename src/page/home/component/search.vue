@@ -8,6 +8,7 @@
 </template>
 <script >
 import { mapGetters } from 'vuex';
+
 import Search from '@/components/Search/index.vue';
 export default {
   components: { Search },

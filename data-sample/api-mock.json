@@ -9,7 +9,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2023-01-01 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-01"
+      "initialDay": "2023-01-01",
+      "note":""
     },
     {
       "id": "2",
@@ -20,7 +21,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-28 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-28"
+      "initialDay": "2022-12-28",
+      "note":""
     },
     {
       "id": "3",
@@ -31,7 +33,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2023-01-01 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-01"
+      "initialDay": "2023-01-01",
+      "note":""
     },
     {
       "id": "4",
@@ -42,7 +45,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2023-01-04 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-04"
+      "initialDay": "2023-01-04",
+      "note":""
     },
     {
       "id": "5",
@@ -53,7 +57,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2023-01-04 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-04"
+      "initialDay": "2023-01-04",
+      "note":""
     },
     {
       "id": "6",
@@ -64,7 +69,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "7",
@@ -75,7 +81,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "8",
@@ -86,7 +93,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-28 13:21:42.683",
       "value": "process",
-      "initialDay": "2022-12-28"
+      "initialDay": "2022-12-28",
+      "note":""
     },
     {
       "id": "9",
@@ -97,7 +105,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2023-01-01 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-01"
+      "initialDay": "2023-01-01",
+      "note":""
     },
     {
       "id": "10",
@@ -108,7 +117,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "11",
@@ -119,7 +129,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "12",
@@ -130,7 +141,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "13",
@@ -141,7 +153,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "14",
@@ -152,7 +165,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "15",
@@ -163,7 +177,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "16",
@@ -174,7 +189,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "17",
@@ -185,7 +201,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "18",
@@ -196,7 +213,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "19",
@@ -207,7 +225,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "20",
@@ -218,7 +237,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "21",
@@ -229,7 +249,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "22",
@@ -240,7 +261,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "23",
@@ -251,7 +273,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "24",
@@ -262,7 +285,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "25",
@@ -273,7 +297,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "26",
@@ -284,7 +309,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "27",
@@ -295,7 +321,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "28",
@@ -306,7 +333,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     }
     ,
     {
@@ -318,7 +346,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "30",
@@ -329,7 +358,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "31",
@@ -340,7 +370,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "32",
@@ -351,7 +382,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "33",
@@ -362,7 +394,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "34",
@@ -373,7 +406,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "35",
@@ -384,7 +418,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "36",
@@ -395,7 +430,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "37",
@@ -406,7 +442,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "38",
@@ -417,7 +454,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "39",
@@ -428,7 +466,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-03"
+      "initialDay": "2023-01-03",
+      "note":""
     },
     {
       "id": "40",
@@ -439,7 +478,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-02"
+      "initialDay": "2023-01-02",
+      "note":""
     },
     {
       "id": "41",
@@ -450,7 +490,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-02"
+      "initialDay": "2023-01-02",
+      "note":""
     },
     {
       "id": "42",
@@ -461,7 +502,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-02"
+      "initialDay": "2023-01-02",
+      "note":""
     },
     {
       "id": "43",
@@ -472,7 +514,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-02"
+      "initialDay": "2023-01-02",
+      "note":""
     },
     {
       "id": "44",
@@ -483,7 +526,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-02"
+      "initialDay": "2023-01-02",
+      "note":""
     },
     {
       "id": "45",
@@ -494,7 +538,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-02"
+      "initialDay": "2023-01-02",
+      "note":""
     },
     {
       "id": "46",
@@ -505,7 +550,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-02"
+      "initialDay": "2023-01-02",
+      "note":""
     },
     {
       "id": "47",
@@ -516,7 +562,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-02"
+      "initialDay": "2023-01-02",
+      "note":""
     },
     {
       "id": "48",
@@ -527,7 +574,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-02"
+      "initialDay": "2023-01-02",
+      "note":""
     },
     {
       "id": "49",
@@ -538,7 +586,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-02"
+      "initialDay": "2023-01-02",
+      "note":""
     },
     {
       "id": "50",
@@ -549,7 +598,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-02"
+      "initialDay": "2023-01-02",
+      "note":""
     },
     {
       "id": "51",
@@ -560,7 +610,8 @@
       "previousState": "LOW_LIMIT",
       "conf": "2022-12-29 13:21:42.683",
       "value": "process",
-      "initialDay": "2023-01-02"
+      "initialDay": "2023-01-02",
+      "note":""
     }
   ]
 }

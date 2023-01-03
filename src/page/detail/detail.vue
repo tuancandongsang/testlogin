@@ -24,15 +24,19 @@
       <textarea v-model="message" placeholder="note..."></textarea>
     </div>
     <div class="detail-btn">
-      <router-link to="/"><button>OK</button></router-link>
+      <router-link to="/">
+        <Button content="Ok" />
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
 import listService from '@/api/listService';
+import Button from "../../components/Button/Button.vue"
 import './Detail.scss';
 export default {
+  components:{Button},
   props: ['id'],
   data() {
     return {
@@ -44,8 +48,7 @@ export default {
     const response = await listService.getListDetail(this.id);
     this.dataDetail = response.data;
     console.log(this.dataDetail);
-    this.message =
-      this.dataDetail.name + '  alo alo  ' + this.dataDetail.presentStatus;
+    this.message = this.dataDetail.note;
   },
 };
 </script>

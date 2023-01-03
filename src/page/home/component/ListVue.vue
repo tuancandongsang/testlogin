@@ -3,20 +3,21 @@
     <div class="listitem-list">
       <Itemlist v-for="item in itemsListRender" :key="item?.id" :data="item" />
     </div>
-    <div class="listitem-load">
-      <button :class="nodataCSS ? 'nodataCSS' : ''" @click="loadding">
-        Load More
-      </button>
+    <div class="listitem-load" @click="loadding">
+      <Button :nodataCSS="nodataCSS ? 'button-disabled' : ''" content="Load More" />
     </div>
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex';
+import { listpageSize, filterpagesize } from "@/utils/common"
+
 import Itemlist from '@/components/itemlist.vue';
-import {listpageSize , filterpagesize} from "../../../utils/common"
+import Button from '@/components/Button/Button.vue'
+
 export default {
-  components: { Itemlist },
+  components: { Itemlist, Button },
   methods: {
     ...mapActions(['getAllList']),
     ...mapMutations([
@@ -125,30 +126,6 @@ export default {
     transform: translate(-50%, 0);
     display: flex;
     justify-content: center;
-
-    button {
-      width: 100%;
-      padding: 4px 12px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 500;
-      background-color: dodgerblue;
-      color: aliceblue;
-      cursor: pointer;
-
-      &:hover {
-        background-color: rgb(80, 164, 248);
-      }
-    }
-
-    .nodataCSS {
-      background-color: #999;
-
-      &:hover {
-        background-color: #999;
-      }
-    }
   }
 }
 </style>
