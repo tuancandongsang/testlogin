@@ -22,8 +22,8 @@
 
 <script>
 import Popconfirm from '../Popconfirm.vue';
-import drawer from '../../components/drawer.vue';
-import Modal from '../../components/modal.vue';
+import drawer from '@/components/drawer.vue';
+import Modal from '@/components/modal.vue';
 import './Header.scss';
 export default {
   components: { Modal, drawer, Popconfirm },

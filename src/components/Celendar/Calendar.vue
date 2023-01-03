@@ -26,6 +26,5 @@ export default {
       this.formatnodataCSSinit()
     },
   },
-  computed: {},
 };
 </script>

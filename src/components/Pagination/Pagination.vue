@@ -24,14 +24,6 @@ export default {
       this.formatpageSize(5);
       this.formatnodataCSSinit()
     },
-    filterSize(arr, pageSize) {
-      let arr1 = [];
-      for (let i = 0; i < pageSize; i++) {
-        let arr2 = arr[i];
-        arr1.push(arr2);
-      }
-      return arr1;
-    },
   },
   computed: {
     ...mapGetters([
