@@ -1,9 +1,14 @@
 <template>
   <div class="header">
     <div class="header-menu">
-      <span @click="showDrawer"><i class="fa-solid fa-bars"></i></span>
-      <div class="drawer">
-        <Drawer placement="left" :visible="visible" @handleClose="handleClose">
+      <span @click="showDrawer('menu')"><i class="fa-solid fa-bars"></i></span>
+      <div class="drawer" v-if="drawer == 'menu'">
+        <Drawer
+          placement="left"
+          :visible="visible"
+          @handleClose="handleClose"
+          title="Option Setting"
+        >
           <template #headerMenu>
             <div class="drawer-logout" @click="handleLogOut">
               <Button content="Log Out" />
@@ -18,9 +23,16 @@
       </div>
       <div class="header-noty-bell">
         <span class="header-noty-bell-qty">1</span>
-        <span @click="showDrawer"> <i class="fa-solid fa-bell"></i></span>
-        <div class="drawer">
-          <Drawer placement="right" :visible="visible" @handleClose="handleClose">
+        <span @click="showDrawer('noti')">
+          <i class="fa-solid fa-bell"></i
+        ></span>
+        <div class="drawer" v-if="drawer == 'noti'">
+          <Drawer
+            placement="right"
+            :visible="visible"
+            @handleClose="handleClose"
+            title="Notify"
+          >
             <template #headerNoti>
               <div class="drawer-logout">
                 <Button content="Noti" />
@@ -44,21 +56,23 @@ export default {
   data() {
     return {
       visible: false,
+      drawer: '',
     };
   },
   methods: {
     handleLogOut() {
-      removetJwtToken()
+      removetJwtToken();
       setTimeout(() => {
-        this.$router.push('/login')
-      }, 1000)
+        this.$router.push('/login');
+      }, 1000);
     },
-    showDrawer() {
+    showDrawer(text) {
+      this.drawer = text;
       this.visible = true;
     },
     handleClose() {
       this.visible = false;
     },
-  }
+  },
 };
 </script>

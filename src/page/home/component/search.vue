@@ -9,7 +9,7 @@
 <script >
 import { mapGetters } from 'vuex';
 
-import Search from '@/components/Search/index.vue';
+import Search from '../../../components/Search/Index.vue';
 export default {
   components: { Search },
   computed: {

@@ -1,6 +1,13 @@
 <template>
-  <a-drawer title="Option Setting" :placement="placement" :closable="false" width="60%" height="100%" :visible="visible"
-    @close="() => $emit('handleClose')">
+  <a-drawer
+    :title="title"
+    :placement="placement"
+    :closable="false"
+    width="60%"
+    height="100%"
+    :visible="visible"
+    @close="() => $emit('handleClose')"
+  >
     <slot name="headerMenu"></slot>
     <slot name="headerNoti"></slot>
   </a-drawer>
@@ -10,15 +17,15 @@ export default {
   props: {
     placement: {
       type: String,
-      required: true
+      required: true,
     },
     visible: {
       type: Boolean,
-      required: true
-    }
+      required: true,
+    },
+    title: String,
   },
 };
 </script>
 <style lang="scss" scoped>
-
 </style>

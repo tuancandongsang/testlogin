@@ -13,7 +13,7 @@
 import { mapActions, mapGetters, mapMutations } from 'vuex';
 import { listpageSize, filterpagesize } from "@/utils/common";
 
-import ItemList from '@/components/ItemList.vue';
+import ItemList from '../../../components/Itemlist.vue';
 import Button from '@/components/Button/Button.vue';
 
 export default {
