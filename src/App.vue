@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style>
+<!-- <style>
 * {
   box-sizing: border-box;
 }
@@ -24,4 +24,4 @@ body {
 h1 {
   margin: 0;
 }
-</style>
+</style> -->

@@ -19,28 +19,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles/index.scss';
 button {
-    width: 100%;
-    height: 100%;
-    padding: 4px 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 500;
-    background-color: dodgerblue;
-    color: aliceblue;
-    cursor: pointer;
-
-    &:hover {
-        background-color: rgb(80, 164, 248);
-    }
-
+    @include btn($btn-default, $btn-text,)
 }
 .button-disabled {
-    background-color: #999;
+    background-color: $btn-error;
 
     &:hover {
-        background-color: #999;
+        opacity: 0.5;
     }
 }
 </style>

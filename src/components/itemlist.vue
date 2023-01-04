@@ -34,12 +34,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles/index.scss';
+
 .itemlist {
-  display: flex;
-  justify-content: space-between;
+  @include flexBetween;
   align-items: center;
   height: 20%;
-  border-top: 1px solid #999;
+  border-top: 1px solid $bg-border;
 
   &:first-child {
     border-top: none;

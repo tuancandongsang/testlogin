@@ -13,7 +13,7 @@
 import { mapActions, mapGetters, mapMutations } from 'vuex';
 import { listpageSize, filterpagesize } from "@/utils/common";
 
-import ItemList from '../../../components/Itemlist.vue';
+import ItemList from '@/components/ItemList.vue';
 import Button from '@/components/Button/Button.vue';
 
 export default {
@@ -104,8 +104,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "@/styles/index.scss";
+
 .listitem {
-  border: 1px solid #999;
+  @include borderDefault;
   padding: 8px 12px;
   border-radius: 4px;
   height: 85%;
@@ -120,12 +122,11 @@ export default {
     position: absolute;
     width: 80%;
     padding: 8px 12px;
-    border-top: 1px solid #999;
+    border-top: 1px solid $bg-border;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    display: flex;
-    justify-content: center;
+    @include flexCenter;
   }
 }
 </style>

@@ -9,17 +9,9 @@
             <input type="text" placeholder="ID" v-model="user.name" />
           </div>
           <div class="input-form-user">
-            <label for="" @click="tongglePassword" v-if="password"
-              ><i class="fa-solid fa-eye-slash"></i
-            ></label>
-            <label for="" @click="tongglePassword" v-else
-              ><i class="fa-solid fa-eye"></i
-            ></label>
-            <input
-              :type="password ? 'password' : 'text'"
-              placeholder="PASSWORD"
-              v-model="user.password"
-            />
+            <label for="" @click="tongglePassword" v-if="password"><i class="fa-solid fa-eye-slash"></i></label>
+            <label for="" @click="tongglePassword" v-else><i class="fa-solid fa-eye"></i></label>
+            <input :type="password ? 'password' : 'text'" placeholder="PASSWORD" v-model="user.password" />
           </div>
           <div class="input-form-language">
             <select id="cars" @change="onChangeLanguage" v-model="langValue">
@@ -28,9 +20,12 @@
             </select>
           </div>
         </div>
-        <button class="login-form-btn" @click="handleSubmit">
-          {{ $tc('login') }}
-        </button>
+        <div class="login-form-btn">
+          <Button content="Log In"  @click="handleSubmit"/>
+          <!-- <button @click="handleSubmit">
+            {{ $tc('login') }}
+          </button> -->
+        </div>
         <p class="error login-form-message" v-if="messageError">
           {{ $tc('errorLogin') }}
         </p>
@@ -43,12 +38,14 @@
 </template>
 
 <script>
+import Button from '../../components/Button/Button.vue'
 import { i18n } from '@/config/setup-i18n';
 import { DEFAULT_LANG } from '@/constants/index';
 import './Login.scss';
-import {setJwtToken} from '@/utils/helpers';
+import { setJwtToken } from '@/utils/helpers';
 
 export default {
+  components:{Button},
   data: () => {
     return {
       langValue: DEFAULT_LANG,

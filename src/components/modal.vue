@@ -66,11 +66,12 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+@import "@/styles/index.scss";
+
 .modal {
   &-radio {
     &-item {
-      display: flex;
-      justify-content: space-between;
+      @include flexBetween;
       gap: 20px;
       label {
         font-size: 1rem;

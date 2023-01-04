@@ -1,6 +1,6 @@
+@import "@/styles/index.scss";
 .header {
-  display: flex;
-  justify-content: space-between;
+  @include flexBetween;
   font-size: 1.5rem;
   padding: 10px;
   max-height: 10vh;
@@ -17,8 +17,8 @@
         top: -10%;
         right: -30%;
         border-radius: 50%;
-        background-color: tomato;
-        color: antiquewhite;
+        background-color: $bg-noti;
+        color: $btn-text;
         font-weight: 500;
         padding: 0 6px;
         font-size: 0.8rem;
@@ -35,5 +35,10 @@
     left: 50%;
     width: 75%;
     transform: translate(-50%, 0%);
+    button{
+      &:hover {
+        background-color: $btn-error;
+    }
+    }
   }
 }

@@ -12,13 +12,14 @@
 <script >
 </script>
 <style scoped lang="scss">
+@import "@/styles/mixin.scss";
+
 #not-found-page {
   .box {
     background-color: #ededed;
     min-height: 100vh;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    @include flexCenter;
     flex-direction: column;
 
     h3 {

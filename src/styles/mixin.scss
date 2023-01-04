@@ -1,66 +1,26 @@
-@mixin clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
 }
 
-@mixin scrollBar {
-  &::-webkit-scrollbar-track-piece {
-    background: #d3dce6;
-  }
-
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #99a9bf;
-    border-radius: 20px;
-  }
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
 }
 
-@mixin relative {
-  position: relative;
+@mixin borderDefault {
+  border: 1px solid #999;
+}
+
+@mixin btn($btn-bg, $btn-text) {
   width: 100%;
   height: 100%;
-}
-
-@mixin pct($pct) {
-  width: #{$pct};
-  position: relative;
-  margin: 0 auto;
-}
-
-@mixin triangle($width, $height, $color, $direction) {
-  $width: $width/2;
-  $color-border-style: $height solid $color;
-  $transparent-border-style: $width solid transparent;
-  height: 0;
-  width: 0;
-
-  @if $direction==up {
-    border-bottom: $color-border-style;
-    border-left: $transparent-border-style;
-    border-right: $transparent-border-style;
-  }
-
-  @else if $direction==right {
-    border-left: $color-border-style;
-    border-top: $transparent-border-style;
-    border-bottom: $transparent-border-style;
-  }
-
-  @else if $direction==down {
-    border-top: $color-border-style;
-    border-left: $transparent-border-style;
-    border-right: $transparent-border-style;
-  }
-
-  @else if $direction==left {
-    border-right: $color-border-style;
-    border-top: $transparent-border-style;
-    border-bottom: $transparent-border-style;
-  }
+  padding: 4px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: $btn-bg;
+  color: $btn-text;
+  cursor: pointer;
 }

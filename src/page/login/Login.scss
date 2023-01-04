@@ -1,7 +1,8 @@
+@import '@/styles/index.scss';
+
 .container {
-    display: flex;
-    justify-content: center;
-    background: #ededed;
+    @include flexCenter;
+    background: $bg-app;
 
     .container-login {
         background-image: url('../../assets/image/login/login-background.jpg');
@@ -9,20 +10,18 @@
         height: 100vh;
         background-repeat: no-repeat;
         background-size: cover;
-        display: flex;
-        justify-content: center;
+        @include flexCenter;
         position: relative;
         min-height: 375px;
         min-width: 320px;
 
         .login-form {
             width: 70%;
-            display: flex;
-            justify-content: center;
+            @include flexCenter;
             flex-direction: column;
 
             &-title {
-                color: yellow;
+                color: $text-logo;
                 margin-bottom: 100px;
                 font-size: 4rem;
                 align-self: center;
@@ -33,7 +32,7 @@
                 flex-direction: column;
 
                 &-user {
-                    background-color: #ffffff;
+                    background-color: $bg-input;
                     margin: 4px 0px;
                     padding: 8px 12px;
                     display: flex;
@@ -68,26 +67,26 @@
             }
 
             &-btn {
-                border: 0px;
-                padding: 0px;
-                padding: 12px 16px;
-                border-radius: 5px;
-                width: 200px;
                 align-self: center;
+                width: 200px;
                 margin-top: 100px;
                 cursor: pointer;
 
-                &:hover {
-                    background-color: #999;
+                button {
+                    @include btn($bg-app, $text);
+
+                    &:hover {
+                        background-color: $btn-error;
+                    }
                 }
             }
 
             .error {
-                color: tomato;
+                color: $text-error;
             }
 
             .success {
-                color: rgb(106, 224, 59);
+                color: $text-success;
             }
 
             &-message {

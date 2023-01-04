@@ -1,10 +1,11 @@
+@import "@/styles/index.scss";
+
 #not-found-page {
   .box {
-    background-color: #ededed;
+    background-color: $bg-app;
     min-height: 100vh;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    @include flexCenter;
     flex-direction: column;
 
     h3 {
@@ -29,8 +30,8 @@
       }
 
       &:hover {
-        color: #ededed;
-        background-color: #999;
+        color: $bg-appeded;
+        background-color: $btn-error;
       }
     }
   }
