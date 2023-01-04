@@ -1,13 +1,14 @@
 import listService from '../../api/listService';
 const state = {
   items: [],
+  itemId: {},
   filter: 'process',
   valueDate: '',
   valueSearch: 0,
   render: [],
   pageNumber: 1,
   pageSize: 5,
-  nodataCSSinit:false
+  nodataCSSinit: false
 };
 const getters = {
   itemsList: (state) => state.items,
@@ -21,7 +22,8 @@ const getters = {
   pageNumber: (state) => state.pageNumber,
   renderListTotal: (state) => state.render.length,
   pageSize: (state) => state.pageSize,
-  nodataCSSinit:(state) => state.nodataCSSinit
+  nodataCSSinit: (state) => state.nodataCSSinit,
+  dataItem: (state) => state.dataItem
 };
 
 const actions = {
@@ -33,9 +35,27 @@ const actions = {
       console.log(error);
     }
   },
+  async getItemDetail({ commit }, id) {
+    try {
+      const data = await listService.getListDetail(id)
+      commit('getItemDetail', data.data)
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  async getListUpdate(id , data){
+    try {
+      await listService.getListUpdate(id, data)
+    } catch (error) {
+      console.log(error);
+    }
+  }
 };
 
 const mutations = {
+  getItemDetail(state, dataItem) {
+    state.dataItem = dataItem
+  },
   getAllList(state, item) {
     state.items = item;
   },
@@ -64,11 +84,11 @@ const mutations = {
   formatpageSize(state, num) {
     state.pageSize = num;
   },
-  formatnodataCSSinit(state){
+  formatnodataCSSinit(state) {
     state.nodataCSSinit = false
   },
-  updatenodataCSSinit(state){
-    state.nodataCSSinit= true
+  updatenodataCSSinit(state) {
+    state.nodataCSSinit = true
   },
   addingPagesizeload(state, num) {
     state.pageSize += num;

@@ -1,5 +1,5 @@
 import request from './request';
-import {API_ENDPOINT} from '@/constants'
+import { API_ENDPOINT } from '@/constants'
 
 class listService {
   constructor() {
@@ -13,6 +13,9 @@ class listService {
   }
   getListDetail(id) {
     return request.get(API_ENDPOINT.LIST_DETAIL + `/${id}`);
+  }
+  getListUpdate(id, data) {
+    return request.patch(API_ENDPOINT.LIST_UPDATE + `/${data}`, id);
   }
 }
 
