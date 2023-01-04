@@ -12,11 +12,11 @@
 <script >
 </script>
 <style scoped lang="scss">
-@import "@/styles/mixin.scss";
+@import "@/styles/index.scss";
 
 #not-found-page {
   .box {
-    background-color: #ededed;
+    background-color: $bg-app;
     min-height: 100vh;
     align-items: center;
     @include flexCenter;
@@ -35,7 +35,8 @@
       }
     }
 
-    .btn-submit {
+    button {
+      @include borderDefault;
       padding: 9px 20px;
       border-radius: 10px;
       cursor: pointer;
@@ -44,8 +45,8 @@
       }
 
       &:hover {
-        color: #ededed;
-        background-color: #999;
+        color: $bg-app;
+        background-color: $btn-error;
       }
     }
   }

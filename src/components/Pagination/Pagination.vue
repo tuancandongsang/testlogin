@@ -13,7 +13,6 @@ export default {
   },
   async created() {
     await this.getAllList();
-
   },
   methods: {
     ...mapMutations(['changepagenumber', 'formatpageSize', "formatnodataCSSinit"]),

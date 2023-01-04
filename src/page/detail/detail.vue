@@ -35,8 +35,9 @@
 import listService from '@/api/listService';
 import Button from "@/components/Button/Button.vue";
 import './Detail.scss';
+import { mapActions, mapGetters } from 'vuex';
 export default {
-  components:{Button},
+  components: { Button },
   props: ['id'],
   data() {
     return {
@@ -45,10 +46,20 @@ export default {
     };
   },
   async created() {
-    const response = await listService.getListDetail(this.id);
-    this.dataDetail = response.data;
-    console.log(this.dataDetail);
-    this.message = this.dataDetail.note;
+    await this.getAllList()
+    try {
+      const response = await listService.getListDetail(this.id);
+      this.dataDetail = response.data;
+      this.message = this.dataDetail.note;
+    } catch (error) {
+      console.log(error);
+    }
+    const checkId = this.itemsList.map(item => item.id).find(id => id == this.id)
+    if (!checkId) {
+      this.$router.push({ name: 'home' })
+    }
   },
+  methods: { ...mapActions(['getAllList']) },
+  computed: { ...mapGetters(['itemsList']) },
 };
 </script>

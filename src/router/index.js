@@ -18,6 +18,7 @@ export const router = createRouter({
         {
           path: '/home',
           component: Home,
+          name: 'home'
         },
         {
           path: '/:id',
@@ -26,7 +27,7 @@ export const router = createRouter({
         },
       ],
     },
-    { path: '/:notFound(.*)', component: NotFound },
+    { path: '/:notFound(.*)', component: NotFound, name: 'NotFound' },
   ],
 });
 router.beforeEach((to, from, next) => {
