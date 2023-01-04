@@ -47,17 +47,17 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(['changefilter', 'fomatPageNumber', "formatpageSize"]),
+    ...mapMutations(['changefilter', 'fomatPageNumber', "formatpageSize","formatnodataCSSinit"]),
     showModal() {
       this.visible = true;
     },
     handleOk(e) {
-      const state = this.picked;
-      this.changefilter(state);
-      this.visible = false;
       console.log(e.target.value);
+      this.changefilter(this.picked);
+      this.visible = false;
       this.fomatPageNumber();
       this.formatpageSize(5)
+      this.formatnodataCSSinit()
     },
   },
   computed: {

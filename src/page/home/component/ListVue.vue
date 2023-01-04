@@ -51,7 +51,6 @@ export default {
   },
   async created() {
     await this.getAllList();
-    // console.log('create', this.itemsList);
   },
   computed: {
     ...mapGetters([
