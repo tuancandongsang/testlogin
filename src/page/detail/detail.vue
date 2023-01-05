@@ -52,19 +52,16 @@ export default {
     this.message = this.dataItem.note
   },
   methods: {
-    ...mapActions(['getAllList', 'getItemDetail', 'getListUpdate']),
+    ...mapActions(['getAllList', 'getItemDetail']),
     async handleSubmit() {
-      const item = this.dataItem
       const newData = {
         note: this.message
       }
-      console.log(item.id, newData);
       try {
-        await listService.getListUpdate(item.id, newData)
+        await listService.getListUpdate(this.dataItem.id, newData)
       } catch (error) {
         console.log(error);
       }
-      // await this.getListUpdate(item.id, newData)
       this.$router.push('/')
     }
   },

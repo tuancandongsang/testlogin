@@ -43,13 +43,6 @@ const actions = {
       console.log(error);
     }
   },
-  async getListUpdate(id , data){
-    try {
-      await listService.getListUpdate(id, data)
-    } catch (error) {
-      console.log(error);
-    }
-  }
 };
 
 const mutations = {

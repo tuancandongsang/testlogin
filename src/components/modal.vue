@@ -58,6 +58,7 @@ export default {
       this.fomatPageNumber();
       this.formatpageSize(5)
       this.formatnodataCSSinit()
+      this.$router.push('/home')
     },
   },
   computed: {
