@@ -15,7 +15,7 @@ class listService {
     return request.get(API_ENDPOINT.LIST_DETAIL + `/${id}`);
   }
   getListUpdate(id, data) {
-    return request.patch(API_ENDPOINT.LIST_UPDATE + `/${data}`, id);
+    return request.patch(API_ENDPOINT.LIST_UPDATE + `/${id}`, data);
   }
 }
 

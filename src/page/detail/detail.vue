@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import listService from '../../api/listService'
 import Button from "@/components/Button/Button.vue";
 import './Detail.scss';
 import { mapActions, mapGetters } from 'vuex';
@@ -53,24 +54,18 @@ export default {
   methods: {
     ...mapActions(['getAllList', 'getItemDetail', 'getListUpdate']),
     async handleSubmit() {
-      console.log(this.dataItem);
-      const dataItem = this.dataItem
+      const item = this.dataItem
       const newData = {
-        id: dataItem.id,
-        name: dataItem.name,
-        time: dataItem.time,
-        presentValue: dataItem.presentValue,
-        presentStatus: dataItem.presentStatus,
-        previousState: dataItem.previousState,
-        conf: dataItem.conf,
-        value: dataItem.value,
-        initialDay: dataItem.initialDay,
         note: this.message
       }
-      console.log(newData,newData);
-       this.getListUpdate(newData.id, newData)
+      console.log(item.id, newData);
+      try {
+        await listService.getListUpdate(item.id, newData)
+      } catch (error) {
+        console.log(error);
+      }
+      // await this.getListUpdate(item.id, newData)
       this.$router.push('/')
-      console.log('doneeee');
     }
   },
   computed: { ...mapGetters(['itemsList', 'dataItem']) },
