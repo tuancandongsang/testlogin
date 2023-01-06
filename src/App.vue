@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 export default {
   data() {
     return {
@@ -13,6 +13,9 @@ export default {
     };
   },
   created() {},
+  computed: {
+    ...mapGetters(['angle']),
+  },
   methods: {
     ...mapMutations(['getAngle']),
     getDimensions(event) {
@@ -23,18 +26,16 @@ export default {
     setVertical(angle) {
       const VERTICAL_ANGLE = 0;
       this.isVertical = angle === VERTICAL_ANGLE;
-      console.log('isVertical', this.isVertical);
     },
   },
   mounted() {
-    const angle = window.orientation;
+    // const angle = window.orientation;
     console.log('tuan', window.orientation);
-    this.setVertical(angle);
+    this.setVertical(this.angle);
     window.addEventListener('orientationchange', this.getDimensions);
   },
   unmounted() {
     window.removeEventListener('orientationchange', this.getDimensions);
   },
-  
 };
 </script>
