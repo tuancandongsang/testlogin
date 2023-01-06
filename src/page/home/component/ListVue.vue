@@ -4,16 +4,19 @@
       <ItemList v-for="item in itemsListRender" :key="item?.id" :data="item" />
     </div>
     <div class="listitem-load" @click="loadding">
-      <Button :nodataCSS="nodataCSS ? 'button-disabled' : ''" content="Load More" />
+      <Button
+        :nodataCSS="nodataCSS ? 'button-disabled' : ''"
+        content="Load More"
+      />
     </div>
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters, mapMutations } from 'vuex';
-import { listpageSize, filterpagesize } from "@/utils/common";
+import { listpageSize, filterpagesize } from '@/utils/common';
 
-import ItemList from '@/components/ItemList.vue';
+import ItemList from '../../../components/Itemlist.vue';
 import Button from '@/components/Button/Button.vue';
 
 export default {
@@ -66,11 +69,7 @@ export default {
     ]),
     itemsListRender() {
       if (this.filter == 'allEvent') {
-        const initArray = listpageSize(
-          this.itemsList,
-          this.pageNumber,
-          20
-        );
+        const initArray = listpageSize(this.itemsList, this.pageNumber, 20);
         return filterpagesize(initArray, this.pageSize);
       } else if (this.filter == 'process') {
         const arrrr = this.itemsProcess.filter(
@@ -103,7 +102,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/styles/index.scss";
+@import '@/styles/index.scss';
 
 .listitem {
   @include borderDefault;
