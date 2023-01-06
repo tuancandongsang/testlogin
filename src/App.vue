@@ -9,14 +9,13 @@
 export default {
   data() {
     return {
-      isVertical: false,
+      isVertical: true,
     }
   },
   mounted() {
     // by default, screen is vertical or not?
     const angle = window.orientation;
     this.setVertical(angle);
-
     window.addEventListener('orientationchange', this.getDimensions);
   },
   unmounted() {
@@ -29,32 +28,10 @@ export default {
       this.setVertical(angle);
     },
     setVertical(angle) {
-      const VERTICAL_ANGLE = 90;
+      const VERTICAL_ANGLE = 0;
       this.isVertical = (angle === VERTICAL_ANGLE);
-      console.log('demo 1', this.isVertical);
+      console.log("isVertical", this.isVertical);
     }
   }
 }
 </script>
-
-<!-- <style>
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: sans-serif;
-}
-
-body {
-  margin: 0;
-}
-
-#app {
-  height: 100vh;
-}
-
-h1 {
-  margin: 0;
-}
-</style> -->
