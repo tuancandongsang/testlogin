@@ -1,7 +1,10 @@
 <template>
   <div class="listitem">
-    <div class="listitem-list">
+    <!-- <div class="listitem-list">
       <ItemList v-for="item in itemsListRender" :key="item?.id" :data="item" />
+    </div> -->
+    <div class="listitem-list_horizontal">
+      <itemList_Horizontal />
     </div>
     <div class="listitem-load" @click="loadding">
       <Button
@@ -16,11 +19,12 @@
 import { mapActions, mapGetters, mapMutations } from 'vuex';
 import { listpageSize, filterpagesize } from '@/utils/common';
 
-import ItemList from '../../../components/Itemlist.vue';
+// import ItemList from '../../../components/ItemList/Itemlist.vue';
+import itemList_Horizontal from '../../../components/ItemList/itemList_Horizontal.vue';
 import Button from '@/components/Button/Button.vue';
 
 export default {
-  components: { ItemList, Button },
+  components: { itemList_Horizontal, Button },
   methods: {
     ...mapActions(['getAllList']),
     ...mapMutations([
@@ -108,8 +112,15 @@ export default {
   @include borderDefault;
   padding: 8px 12px;
   border-radius: 4px;
-  height: 85%;
+  // height: 85%;
+  height: 73%;
   position: relative;
+
+  &-list_horizontal {
+    height: 75%;
+    overflow: auto;
+    background-color: aquamarine;
+  }
 
   &-list {
     height: 90%;

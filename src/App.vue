@@ -12,7 +12,6 @@ export default {
       isVertical: true,
     };
   },
-  created() {},
   computed: {
     ...mapGetters(['angle']),
   },

@@ -10,10 +10,14 @@ body {
   text-rendering: optimizeLegibility;
   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
 }
+
 * {
   box-sizing: border-box;
 }
 
-h1 {
+h1,
+h2,
+h3,
+p {
   margin: 0;
 }
