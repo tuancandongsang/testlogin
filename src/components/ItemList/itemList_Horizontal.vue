@@ -1,129 +1,12 @@
 <template>
   <div class="itemlist">
     <div class="itemlist-container">
-      <div>avatar</div>
-      <h3>name</h3>
-      <p>time/date</p>
-      <p>preview state</p>
-      <p>preview value</p>
-      <p>nhiet do</p>
-      <div>
-        <router-link :to="`/${data?.id}`"
-          >Detail <i class="fa-solid fa-arrow-right"></i
-        ></router-link>
-      </div>
-    </div>
-    <div class="itemlist-container">
-      <div>avatar</div>
-      <h3>name</h3>
-      <p>time/date</p>
-      <p>preview state</p>
-      <p>preview value</p>
-      <p>nhiet do</p>
-      <div>
-        <router-link :to="`/${data?.id}`"
-          >Detail <i class="fa-solid fa-arrow-right"></i
-        ></router-link>
-      </div>
-    </div>
-    <div class="itemlist-container">
-      <div>avatar</div>
-      <h3>name</h3>
-      <p>time/date</p>
-      <p>preview state</p>
-      <p>preview value</p>
-      <p>nhiet do</p>
-      <div>
-        <router-link :to="`/${data?.id}`"
-          >Detail <i class="fa-solid fa-arrow-right"></i
-        ></router-link>
-      </div>
-    </div>
-    <div class="itemlist-container">
-      <div>avatar</div>
-      <h3>name</h3>
-      <p>time/date</p>
-      <p>preview state</p>
-      <p>preview value</p>
-      <p>nhiet do</p>
-      <div>
-        <router-link :to="`/${data?.id}`"
-          >Detail <i class="fa-solid fa-arrow-right"></i
-        ></router-link>
-      </div>
-    </div>
-    <div class="itemlist-container">
-      <div>avatar</div>
-      <h3>name</h3>
-      <p>time/date</p>
-      <p>preview state</p>
-      <p>preview value</p>
-      <p>nhiet do</p>
-      <div>
-        <router-link :to="`/${data?.id}`"
-          >Detail <i class="fa-solid fa-arrow-right"></i
-        ></router-link>
-      </div>
-    </div>
-    <div class="itemlist-container">
-      <div>avatar</div>
-      <h3>name</h3>
-      <p>time/date</p>
-      <p>preview state</p>
-      <p>preview value</p>
-      <p>nhiet do</p>
-      <div>
-        <router-link :to="`/${data?.id}`"
-          >Detail <i class="fa-solid fa-arrow-right"></i
-        ></router-link>
-      </div>
-    </div>
-    <div class="itemlist-container">
-      <div>avatar</div>
-      <h3>name</h3>
-      <p>time/date</p>
-      <p>preview state</p>
-      <p>preview value</p>
-      <p>nhiet do</p>
-      <div>
-        <router-link :to="`/${data?.id}`"
-          >Detail <i class="fa-solid fa-arrow-right"></i
-        ></router-link>
-      </div>
-    </div>
-    <div class="itemlist-container">
-      <div>avatar</div>
-      <h3>name</h3>
-      <p>time/date</p>
-      <p>preview state</p>
-      <p>preview value</p>
-      <p>nhiet do</p>
-      <div>
-        <router-link :to="`/${data?.id}`"
-          >Detail <i class="fa-solid fa-arrow-right"></i
-        ></router-link>
-      </div>
-    </div>
-    <div class="itemlist-container">
-      <div>avatar</div>
-      <h3>name</h3>
-      <p>time/date</p>
-      <p>preview state</p>
-      <p>preview value</p>
-      <p>nhiet do</p>
-      <div>
-        <router-link :to="`/${data?.id}`"
-          >Detail <i class="fa-solid fa-arrow-right"></i
-        ></router-link>
-      </div>
-    </div>
-    <div class="itemlist-container">
-      <div>avatar</div>
-      <h3>name</h3>
-      <p>time/date</p>
-      <p>preview state</p>
-      <p>preview value</p>
-      <p>nhiet do</p>
+      <p>{{ avatar }}</p>
+      <p>{{ data?.name }}</p>
+      <p>{{ data?.time }}</p>
+      <p>{{ data?.previousState }}</p>
+      <p>{{ data?.presentStatus }}</p>
+      <p>{{ data?.presentValue }}</p>
       <div>
         <router-link :to="`/${data?.id}`"
           >Detail <i class="fa-solid fa-arrow-right"></i
@@ -143,8 +26,8 @@ export default {
   },
   computed: {
     avatar() {
-      if (this.data?.value) {
-        return `PRO`;
+      if (this.data?.value == 'process') {
+        return `pro`;
       }
       return `SYT`;
     },
@@ -157,18 +40,20 @@ export default {
 
 .itemlist {
   height: 20%;
-  background-color: red;
+  border-top: 1px solid $bg-border;
 
   &:first-child {
-    // border-top: none;
+    border-top: none;
   }
 
   &-container {
-    background-color: yellow;
     display: flex;
     justify-content: space-between;
     margin: 0 5px;
     height: 100%;
+    font-size: 0.8rem;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
   }
 }
 </style>

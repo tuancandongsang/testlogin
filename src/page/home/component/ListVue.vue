@@ -1,10 +1,14 @@
 <template>
-  <div class="listitem">
-    <!-- <div class="listitem-list">
+  <div class="listitem" :class="angle == 0 ? '' : 'rotate'">
+    <div class="listitem-list" v-if="angle == 0">
       <ItemList v-for="item in itemsListRender" :key="item?.id" :data="item" />
-    </div> -->
-    <div class="listitem-list_horizontal">
-      <itemList_Horizontal />
+    </div>
+    <div class="listitem-list_horizontal" v-if="angle == 90">
+      <itemList_Horizontal
+        v-for="item in itemsListRender"
+        :key="item?.id"
+        :data="item"
+      />
     </div>
     <div class="listitem-load" @click="loadding">
       <Button
@@ -19,12 +23,12 @@
 import { mapActions, mapGetters, mapMutations } from 'vuex';
 import { listpageSize, filterpagesize } from '@/utils/common';
 
-// import ItemList from '../../../components/ItemList/Itemlist.vue';
+import ItemList from '../../../components/ItemList/Itemlist.vue';
 import itemList_Horizontal from '../../../components/ItemList/itemList_Horizontal.vue';
 import Button from '@/components/Button/Button.vue';
 
 export default {
-  components: { itemList_Horizontal, Button },
+  components: { itemList_Horizontal, Button, ItemList },
   methods: {
     ...mapActions(['getAllList']),
     ...mapMutations([
@@ -70,6 +74,7 @@ export default {
       'pageNumber',
       'pageSize',
       'nodataCSSinit',
+      'angle',
     ]),
     itemsListRender() {
       if (this.filter == 'allEvent') {
@@ -112,14 +117,13 @@ export default {
   @include borderDefault;
   padding: 8px 12px;
   border-radius: 4px;
-  // height: 85%;
-  height: 73%;
+  height: 85%;
+
   position: relative;
 
   &-list_horizontal {
     height: 75%;
     overflow: auto;
-    background-color: aquamarine;
   }
 
   &-list {
@@ -137,5 +141,8 @@ export default {
     transform: translate(-50%, 0);
     @include flexCenter;
   }
+}
+.rotate {
+  height: 70%;
 }
 </style>

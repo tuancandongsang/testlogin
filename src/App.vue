@@ -5,32 +5,17 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex';
+import { mapMutations } from 'vuex';
 export default {
-  data() {
-    return {
-      isVertical: true,
-    };
-  },
-  computed: {
-    ...mapGetters(['angle']),
-  },
   methods: {
     ...mapMutations(['getAngle']),
     getDimensions(event) {
       const { angle } = event.target.screen.orientation;
-      console.log('tuancan', angle);
-      this.setVertical(angle);
-    },
-    setVertical(angle) {
-      const VERTICAL_ANGLE = 0;
-      this.isVertical = angle === VERTICAL_ANGLE;
+      this.getAngle(angle);
     },
   },
   mounted() {
-    // const angle = window.orientation;
-    console.log('tuan', window.orientation);
-    this.setVertical(this.angle);
+    this.getAngle(window.orientation);
     window.addEventListener('orientationchange', this.getDimensions);
   },
   unmounted() {

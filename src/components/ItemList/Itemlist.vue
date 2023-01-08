@@ -53,14 +53,6 @@ export default {
   &-infor {
     flex-grow: 1;
     margin-left: 4px;
-
-    h3 {
-      margin: 0;
-    }
-
-    p {
-      margin: 0;
-    }
   }
 }
 </style>
