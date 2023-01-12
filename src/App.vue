@@ -15,7 +15,6 @@ export default {
     },
   },
   mounted() {
-    console.log(process.env.VUE_APP_API_URL);
     this.getAngle(window.orientation);
     window.addEventListener('orientationchange', this.getDimensions);
   },
