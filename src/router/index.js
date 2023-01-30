@@ -5,11 +5,13 @@ import Home from '../page/home/Home.vue';
 import Layout from '../layout/Layout.vue';
 import Detail from '../page/detail/Detail.vue';
 import { getJwtToken } from '../utils/helpers';
+import logincv from '../page/logincv.vue';
 
 export const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/login', component: Login },
+    { path: '/logincv', component: logincv },
     {
       path: '/',
       redirect: '/home',
@@ -18,7 +20,7 @@ export const router = createRouter({
         {
           path: '/home',
           component: Home,
-          name: 'home'
+          name: 'home',
         },
         {
           path: '/:id',
