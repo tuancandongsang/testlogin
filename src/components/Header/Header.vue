@@ -47,8 +47,8 @@
 
 <script>
 import { removetJwtToken } from '@/utils/helpers';
-import Drawer from '@/components/Drawer.vue';
-import Modal from '@/components/Modal.vue';
+import Drawer from '@/components/drawer.vue';
+import Modal from '@/components/modal.vue';
 import './Header.scss';
 import Button from '../Button/Button.vue';
 export default {

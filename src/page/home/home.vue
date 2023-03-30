@@ -16,7 +16,7 @@
 <script>
 import { mapGetters } from 'vuex';
 import Calendar from '@/components/Celendar/Calendar.vue';
-import Search from './component/Search.vue';
+import Search from './component/search.vue';
 import ListVue from './component/ListVue.vue';
 import Pagination from '@/components/Pagination/Pagination.vue';
 import "./Home.scss"
